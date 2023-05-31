@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include("_head.html")
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/iconsprite/sprite.svg"
+        title="Ваш браузер не поддерживает SVG"></object>
+    <div id="panel">
+    </div>
+    <div class="wrap">
+        @@include("_header.html")
+        <main>
+            <div class="container">
+                <!-- breadcrumbs-->
+                <nav class="breadcrumbs">
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Главная</span></a></div>
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Дизайнеры</span></a>
+                    </div>
+                    <div class="breadcrumbs__item"><span>Светлана Малюк</span></div>
+                </nav>
+            </div>
+            <!--designer-info-->
+            <section class="section designer-info">
+                <div class="container">
+                    <h2 class="section__title section__title--sm">Светлана Малюк</h2>
+                    <div class="page-grid designer-info__inner">
+                        <div class="media-cover designer-info__preview">
+                            <picture>
+                                <source srcset="img/webp/designer-1.webp" type="image/webp">
+                                <img src="img/designer-1.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="designer-info__content">
+                            <h3>О дизайнере</h3>
+                            <p>Валентина Самойлова родилась в Москве в 1971 году. Работает в основном со скульптурой и
+                                инсталляциями, используя керамику, бумагу и текстиль. В течение четырех лет преподавала
+                                керамику и скульптуру в Третьяковской галерее, разрабатывала политику инклюзии: с ее
+                                помощью музей создал художественные классы для людей с ограниченными возможностями
+                                здоровья.</p>
+                            <p>Плитка нашего производства станет отличным решением для создания уникального дизайна
+                                помещения. Плитка нашего производства станет отличным решением для создания уникального
+                                дизайна помещения. Плитка нашего производства</p>
+                            <p>Станет отличным решением для создания уникального дизайна помещения. Плитка нашего
+                                производства станет отличным решением для создания уникального дизайна помещения. Плитка
+                                нашего производства станет отличным решением для создания уникального дизайна помещения.
+                            </p>
+                        </div>
+                        <a href="#" class="btn designer-info__btn">
+                            <span>Заказать проект</span>
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!--designer-certificates-->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section__title section__title--sm">Достижения</h2>
+                    <div class="js-certificates">
+                        <div class="carousel">
+                            <div class="item-cert">
+                                <div class="item-cert__preview">
+                                    <picture>
+                                        <source srcset="img/webp/certificate-1.webp" type="image/webp">
+                                        <img src="img/cetificate-1.jpg" alt="Сертификат">
+                                    </picture>
+                                </div>
+                                <p>Сертификат Дизайнера года в номинации “Интерьер” по версии Государственного
+                                    содружества дизайнеров России </p>
+                            </div>
+                            <div class="item-cert">
+                                <div class="item-cert__preview">
+                                    <picture>
+                                        <source srcset="img/webp/certificate-2.webp" type="image/webp">
+                                        <img src="img/cetificate-2.jpg" alt="Сертификат">
+                                    </picture>
+                                </div>
+                                <p>Сертификат Дизайнера года в номинации “Интерьер” по версии Государственного
+                                    содружества дизайнеров России </p>
+                            </div>
+                        </div>
+                        <!-- counter-->
+                        <div class="counter">
+                            <span class="counter__current"></span>
+                            <span>\</span>
+                            <span class="counter__total"></span>
+                        </div>
+                        <!-- end counter-->
+                    </div>
+                </div>
+            </section>
+            <!--project-slider-->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section__title section__title--sm">Проекты</h2>
+                    <div class="js-projects">
+                        <!-- carousel-projects-->
+                        <div class="carousel-projects">
+                            <!-- project-card-->
+                            <div class="project-card" href="#">
+                                <div class="project-card__header">
+                                    <div class="project-card__labels"><span>Площадь: 183 м&sup2;</span><span>Коллекция:
+                                            <a href="#">wooden stories</a></span></div><a class="project-card__img"
+                                        href="#">
+                                        <picture>
+                                            <source srcset="img/webp/project-card1.webp" type="image/webp"><img
+                                                src="img/project-card1.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div><a class="project-card__title" href="#">Кухня</a>
+                                <p class="project-card__desc">Коллекция посвещена холодным, синим тонам морского океана,
+                                    который дарит умиротворение и спокойствие</p>
+                                <!-- designer-->
+                                <div class="designer">
+                                    <div class="designer__img"><img src="img/designer.jpg" alt=""></div>
+                                    <div class="designer__desc">
+                                        <p>Дизайнер проекта</p>
+                                        <p>Алексей Герасимов</p>
+                                    </div>
+                                </div>
+                                <!-- end designer-->
+                            </div>
+                            <!-- end project-card-->
+                            <!-- project-card-->
+                            <div class="project-card" href="#">
+                                <div class="project-card__header">
+                                    <div class="project-card__labels"><span>Площадь: 183 м&sup2;</span><span>Коллекция:
+                                            <a href="#">wooden stories</a></span></div><a class="project-card__img"
+                                        href="#">
+                                        <picture>
+                                            <source srcset="img/webp/project-card2.webp" type="image/webp"><img
+                                                src="img/project-card2.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div><a class="project-card__title" href="#">Кухня</a>
+                                <p class="project-card__desc">Коллекция посвещена холодным, синим тонам морского океана,
+                                    который дарит умиротворение и спокойствие</p>
+                                <!-- designer-->
+                                <div class="designer">
+                                    <div class="designer__img"><img src="img/designer.jpg" alt=""></div>
+                                    <div class="designer__desc">
+                                        <p>Дизайнер проекта</p>
+                                        <p>Алексей Герасимов</p>
+                                    </div>
+                                </div>
+                                <!-- end designer-->
+                            </div>
+                            <!-- end project-card-->
+                            <!-- project-card-->
+                            <div class="project-card" href="#">
+                                <div class="project-card__header">
+                                    <div class="project-card__labels"><span>Площадь: 183 м&sup2;</span><span>Коллекция:
+                                            <a href="#">wooden stories</a></span></div><a class="project-card__img"
+                                        href="#">
+                                        <picture>
+                                            <source srcset="img/webp/project-card3.webp" type="image/webp"><img
+                                                src="img/project-card3.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div><a class="project-card__title" href="#">Кухня</a>
+                                <p class="project-card__desc">Коллекция посвещена холодным, синим тонам морского океана,
+                                    который дарит умиротворение и спокойствие</p>
+                                <!-- designer-->
+                                <div class="designer">
+                                    <div class="designer__img"><img src="img/designer.jpg" alt=""></div>
+                                    <div class="designer__desc">
+                                        <p>Дизайнер проекта</p>
+                                        <p>Алексей Герасимов</p>
+                                    </div>
+                                </div>
+                                <!-- end designer-->
+                            </div>
+                            <!-- end project-card-->
+                            <!-- project-card-->
+                            <div class="project-card" href="#">
+                                <div class="project-card__header">
+                                    <div class="project-card__labels"><span>Площадь: 183 м&sup2;</span><span>Коллекция:
+                                            <a href="#">wooden stories</a></span></div><a class="project-card__img"
+                                        href="#">
+                                        <picture>
+                                            <source srcset="img/webp/project-card1.webp" type="image/webp"><img
+                                                src="img/project-card1.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div><a class="project-card__title" href="#">Кухня</a>
+                                <p class="project-card__desc">Коллекция посвещена холодным, синим тонам морского океана,
+                                    который дарит умиротворение и спокойствие</p>
+                                <!-- designer-->
+                                <div class="designer">
+                                    <div class="designer__img"><img src="img/designer.jpg" alt=""></div>
+                                    <div class="designer__desc">
+                                        <p>Дизайнер проекта</p>
+                                        <p>Алексей Герасимов</p>
+                                    </div>
+                                </div>
+                                <!-- end designer-->
+                            </div>
+                            <!-- end project-card-->
+                            <!-- project-card-->
+                            <div class="project-card" href="#">
+                                <div class="project-card__header">
+                                    <div class="project-card__labels"><span>Площадь: 183 м&sup2;</span><span>Коллекция:
+                                            <a href="#">wooden stories</a></span></div><a class="project-card__img"
+                                        href="#">
+                                        <picture>
+                                            <source srcset="img/webp/project-card2.webp" type="image/webp"><img
+                                                src="img/project-card2.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div><a class="project-card__title" href="#">Кухня</a>
+                                <p class="project-card__desc">Коллекция посвещена холодным, синим тонам морского океана,
+                                    который дарит умиротворение и спокойствие</p>
+                                <!-- designer-->
+                                <div class="designer">
+                                    <div class="designer__img"><img src="img/designer.jpg" alt=""></div>
+                                    <div class="designer__desc">
+                                        <p>Дизайнер проекта</p>
+                                        <p>Алексей Герасимов</p>
+                                    </div>
+                                </div>
+                                <!-- end designer-->
+                            </div>
+                            <!-- end project-card-->
+                            <!-- project-card-->
+                            <div class="project-card" href="#">
+                                <div class="project-card__header">
+                                    <div class="project-card__labels"><span>Площадь: 183 м&sup2;</span><span>Коллекция:
+                                            <a href="#">wooden stories</a></span></div><a class="project-card__img"
+                                        href="#">
+                                        <picture>
+                                            <source srcset="img/webp/project-card3.webp" type="image/webp"><img
+                                                src="img/project-card3.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div><a class="project-card__title" href="#">Кухня</a>
+                                <p class="project-card__desc">Коллекция посвещена холодным, синим тонам морского океана,
+                                    который дарит умиротворение и спокойствие</p>
+                                <!-- designer-->
+                                <div class="designer">
+                                    <div class="designer__img"><img src="img/designer.jpg" alt=""></div>
+                                    <div class="designer__desc">
+                                        <p>Дизайнер проекта</p>
+                                        <p>Алексей Герасимов</p>
+                                    </div>
+                                </div>
+                                <!-- end designer-->
+                            </div>
+                        </div>
+                        <!-- end carousel-projects-->
+                        <!-- counter-->
+                        <div class="counter"><span class="counter__current"></span><span>\</span><span
+                                class="counter__total"></span></div>
+                        <!-- end counter-->
+                    </div>
+                </div>
+            </section>
+            <!--form-->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section__title section__title--sm">Заказать проект</h2>
+                    <form action="" class="form order-project-form" onsubmit="event.preventDefault(); formOnSuccess(this)">
+                        <div class="form-group">
+                            <input type="text" name="#" placeholder="Фио*">
+                        </div>
+                        <div class="form-group">
+                            <input class="phone" type="tel" name="#" placeholder="Контактный номер*">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="#" placeholder="Тип помещения">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="#" placeholder="Площадь помещения">
+                        </div>
+                        <div class="f-select radio">
+                            <div class="f-select__header"><span>Дизайнер: <span class="f-select__selected">Валентина
+                                        Самойлова</span></span>
+                                <svg>
+                                    <use href="img/icons/sprite.svg#chevron"></use>
+                                </svg>
+                            </div>
+                            <div class="f-select__list">
+                                <div class="f-select__radio ">
+                                    <input id="radio1" type="radio" name="designer" checked>
+                                    <label for="radio1">Валентина Самойлова</label>
+                                </div>
+                                <div class="f-select__radio">
+                                    <input id="radio2" type="radio" name="designer">
+                                    <label for="radio2">Светлана Малюк</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f-select">
+                            <div class="f-select__header">
+                                <span>Стиль: <span>Выберите стиль</span></span>
+                                <mark>8</mark>
+                                <svg>
+                                    <use href="img/icons/sprite.svg#chevron"></use>
+                                </svg>
+                            </div>
+                            <div class="f-select__list">
+                                <div class="f-select__checkbox">
+                                    <input id="check101" type="checkbox" name="#">
+                                    <label for="check101">Стиль</label>
+                                </div>
+                                <div class="f-select__checkbox">
+                                    <input id="check102" type="checkbox" name="#">
+                                    <label for="check102">Стиль</label>
+                                </div>
+                                <div class="f-select__checkbox">
+                                    <input id="check103" type="checkbox" name="#">
+                                    <label for="check103">Стиль</label>
+                                </div>
+                                <div class="f-select__checkbox">
+                                    <input id="check104" type="checkbox" name="#">
+                                    <label for="check104">Стиль</label>
+                                </div>
+                                <div class="f-select__checkbox">
+                                    <input id="check105" type="checkbox" name="#">
+                                    <label for="check105">Стиль</label>
+                                </div>
+                                <div class="f-select__checkbox">
+                                    <input id="check106" type="checkbox" name="#">
+                                    <label for="check106">Стиль</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__footer">
+                            <button class="form__btn btn btn-dark" type="submit"><span>Заказать проект</span>
+                                <svg>
+                                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                                </svg>
+                            </button>
+                            <p class="form__text">*Отправляя заявку, я соглашаюсь с условиями <a href="#">Политикой
+                                    конфиденциальности</a></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        @@include("_footer.html")
+    </div>
+    @@include("_fixed-el.html")
+</body>
+
+</html>

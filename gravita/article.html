@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="css/dunya.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.min.css" type="text/css" rel="stylesheet">
+    <link href="css/over.css" type="text/css" rel="stylesheet">
+    <link href="css/daniel.css" type="text/css" rel="stylesheet">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <title>Gravita</title>
+</head>
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/iconsprite/sprite.svg"
+        title="Ваш браузер не поддерживает SVG"></object>
+    <div class="wrap">
+        <header class="header">
+    <!-- dropdown-->
+    <div class="dropdown">
+      <div class="dropdown__inner">
+        <div class="dropdown__wrap">
+          <div class="dropdown__header">
+            <!-- location-->
+            <div class="location"><a class="location__link" href="#"> г. Москва</a>
+              <div class="location__dropdown">
+                <p class="location__text">Мы определили ваш город:<span>Москва</span></p><a class="location__confirm btn" href="#"><span>Верно</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a><a class="location__btn btn js-modal-show" href="#js-modal-city"><span>выбрать другой</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <!-- end location-->
+            <!-- search-btn--><a class="search-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#search"></use>
+              </svg></a>
+            <!-- end search-btn-->
+            <!-- basket-btn--><a class="basket-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#cart"></use>
+              </svg><span>25</span></a>
+            <!-- end basket-btn-->
+          </div>
+          <p class="dropdown__title">Меню</p>
+          <!-- menu-->
+          <nav class="menu">
+            <div class="menu__col">
+              <div class="menu__item"><a class="menu__link" href="#">Каталог</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Акции</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Проекты</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Дизайнеры</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Шоурумы</a>
+                <div class="menu__second"><a class="menu__link" href="#">Магазины</a><a class="menu__link" href="#">Образцы в наличии</a><a class="menu__link" href="#">Контакты шоурумов</a></div>
+              </div>
+            </div>
+            <div class="menu__col">
+              <div class="menu__item"><a class="menu__link" href="#">О компании</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Контакты</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Отзывы</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Для дизайнеров</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Новости</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Для партнеров</a></div>
+            </div>
+          </nav>
+          <!-- end menu-->
+          <div class="dropdown__footer"><a class="dropdown__tel" href="tel:88003453455">8 800 345-34-55</a>
+            <!-- callback-btn--><a class="callback-btn btn js-modal-show" href="#js-modal-callback"><span>Заказать звонок</span>
+              <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+              </svg></a>
+            <!-- end callback-btn-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end dropdown-->
+    <!-- search-->
+    <div class="search">
+      <div class="search__inner">
+        <form class="search__form" action="">
+          <div class="form-group">
+            <input type="text" name="#" placeholder="">
+          </div>
+          <button type="submit">
+            <svg>
+              <use href="img/icons/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="search__wrap">
+          <div class="search__results">
+            <p class="search__text">Найдено 8 результатов</p>
+            <div class="search__list">
+              <!-- search-card--><a class="search-card" href="#">
+                <div class="search-card__img">
+                  <picture>
+                    <source srcset="img/webp/img-search1.webp" type="image/webp"><img src="img/img-search1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="search-card__desc">
+                  <p><strong>Наст</strong>ененная панель Gravita M578 c датчиком</p>
+                </div></a>
+              <!-- end search-card-->
+              <!-- search-card--><a class="search-card" href="#">
+                <div class="search-card__img">
+                  <picture>
+                    <source srcset="img/webp/img-search2.webp" type="image/webp"><img src="img/img-search2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="search-card__desc">
+                  <p><strong>Наст</strong>ененная панель Gravita M578 c датчиком</p>
+                </div></a>
+              <!-- end search-card-->
+              <!-- search-card--><a class="search-card" href="#">
+                <div class="search-card__img">
+                  <picture>
+                    <source srcset="img/webp/img-search3.webp" type="image/webp"><img src="img/img-search3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="search-card__desc">
+                  <p><strong>Наст</strong>ененная панель Gravita M578 c датчиком</p>
+                </div></a>
+              <!-- end search-card-->
+            </div>
+            <div class="search__links"><a class="search__link" href="#">Плитка Ceramogran</a><a class="search__link" href="#">Пэтчворк</a><a class="search__link" href="#">Meisseon Neo</a><a class="search__link" href="#">Мозаика</a><a class="search__link" href="#">Гранит</a></div>
+          </div><a class="search__btn btn" href="#"><span>Все результаты</span>
+            <svg>
+              <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <!-- end search-->
+    <div class="container">
+      <div class="header__wrap">
+        <div class="header__row">
+          <div class="header__left">
+            <!-- logo--><a class="logo" href="index.html"><img src="img/icons/logo.svg" alt=""></a>
+            <!-- end logo-->
+          </div>
+          <div class="header__cleft">
+            <!-- location-->
+            <div class="location"><a class="location__link" href="#"> г. Москва</a>
+              <div class="location__dropdown">
+                <p class="location__text">Мы определили ваш город:<span>Москва</span></p><a class="location__confirm btn" href="#"><span>Верно</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a><a class="location__btn btn js-modal-show" href="#js-modal-city"><span>выбрать другой</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <!-- end location-->
+          </div>
+          <div class="header__cright">
+            <!-- top-menu-->
+            <nav class="top-menu"><a class="top-menu__link" href="#">Каталог</a><a class="top-menu__link" href="#">Акции</a><a class="top-menu__link" href="#">Доставка</a><a class="top-menu__link" href="#">Где купить</a></nav>
+            <!-- end top-menu-->
+          </div>
+          <div class="header__right">
+            <!-- search-btn--><a class="search-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#search"></use>
+              </svg></a>
+            <!-- end search-btn-->
+            <!-- basket-btn--><a class="basket-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#cart"></use>
+              </svg><span>25</span></a>
+            <!-- end basket-btn-->
+            <!-- tel--><a class="tel" href="tel:88003453455">8 800 345-34-55</a>
+            <!-- end tel-->
+            <!-- menu-toggle-->
+            <div class="menu-toggle"><span></span><span></span><span></span></div>
+            <!-- end menu-toggle-->
+            <!-- search-close-->
+            <div class="search-close"><span></span><span></span><span></span></div>
+            <!-- end search-close-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+        <main>
+            <div class="container">
+                <!-- breadcrumbs-->
+                <nav class="breadcrumbs">
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link backward" href="#"><span>Назад к
+                                новостям</span></a></div>
+                </nav>
+            </div>
+            <!--article-->
+            <section class="section article">
+                <div class="container">
+                    <div class="article__header">
+                        <h1 class="section__title section__title--sm">Ступени в стиле Вашего дома</h1>
+                        <div class="article__labels">
+                            <a href="#"><span>Дизайн</span></a>
+                            <a href="#"><span>Компания</span></a>
+                        </div>
+                    </div>
+                    <div class="article__inner">
+                        <div class="article__preview">
+                            <picture>
+                                <source srcset="img/webp/news1-1.webp" type="image/webp">
+                                <img src="img/news1-1.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="page-content article__content">
+                            <h5>Лестница в Вашем доме - приглашение войти.</h5>
+                            <p>Оформление ступеней чаще всего оставляют на потом. И напрасно. Ведь лестница – это не
+                                только безопасная и удобная конструкция, но и важный элемент декора, изюминка дома.
+                                Лестница «говорит Добро пожаловать!».</p>
+                            <p>В процессе или даже в конце ремонта может выясниться, что к уже приобретенному сложно или
+                                невозможно подобрать материал для ступеней. Отсутствие похожих текстур в ламинате,
+                                паркете, плитке может стать проблемой. Менять полностью стиль дома, тратить время, силы
+                                и деньги на возврат, подбор материалов или довольствоваться разношерстным общим видом?
+                            </p>
+                            <h5>Решите вопрос комлексно</h5>
+                            <p>Мы предлагаем сэкономить Ваши силы, время и деньги – решить вопрос комплексно. Выберите
+                                красивый керамогранит и оформите лестничную зону в этом же материале.</p>
+                            <ul>
+                                <li>В ассортименте несколько коллекций с разными текстурами. В составе базовая плитка и
+                                    к ней ступень.</li>
+                                <li>Маршевые ступени длиной 120 см - это монолитный, респектабельный вид с минимальным
+                                    количеством швов.</li>
+                                <li>Плитка и ступени из керамогранита предоставляют возможность интенсивной
+                                    эксплуатации.</li>
+                                <li>Разный ценовой диапазон: для помещений с разной значимостью и бюджетом.</li>
+                                <li>Разные конструкции ступеней: с насечками для дополнительной безопасности, для
+                                    любителей лаконичности без насечек , с капиносом - подчеркнуть респектабельность
+                                    Вашего дома и создать креативную подсветку.</li>
+                                <li>Все коллекции базовой плитки со ступенями – эксклюзивное предложение от Дон Керам.
+                                </li>
+                                <li>И конечно же наличие! Ступени и базовая плитка к ним в наличии на складе в Москве.
+                                </li>
+                            </ul>
+                            <h5>Cоздать целостное, стильное пространство стало доступно и просто!</h5>
+                            <p>Оформление ступеней чаще всего оставляют на потом. И напрасно. Ведь лестница – это не
+                                только безопасная и удобная конструкция, но и важный элемент декора, изюминка дома.
+                                Лестница «говорит Добро пожаловать!».</p>
+                            <p>В процессе или даже в конце ремонта может выясниться, что к уже приобретенному сложно или
+                                невозможно подобрать материал для ступеней. Отсутствие похожих текстур в ламинате,
+                                паркете, плитке может стать проблемой. Менять полностью стиль дома, тратить время, силы
+                                и деньги на возврат, подбор материалов или довольствоваться разношерстным общим видом?
+                            </p>
+                            <p>Выбрать керамогранит и ступени можно <a href="#">на сайте</a>, в наших <a
+                                    href="#">магазинах</a>. Все вопросы можно уточнить по номеру телефона: +7 (495)
+                                127-06-97.
+                        </div>
+                        <div class="article__images">
+                            <div class="article__image">
+                                <picture>
+                                    <source srcset="img/webp/news1-2.webp" type="image/webp">
+                                    <img src="img/news1-2.jpg" alt="">
+                                </picture>
+                                <p>Ступени - лучшее для стильного и современного дизайна</p>
+                            </div>
+                            <div class="article__image">
+                                <picture>
+                                    <source srcset="img/webp/news1-3.webp" type="image/webp">
+                                    <img src="img/news1-3.jpg" alt="">
+                                </picture>
+                                <p>Керамогранитыные ступени - лучшее для стильного и современного дизайна</p>
+                            </div>
+                        </div>
+                        <div class="article__video">
+                            <a href="https://youtu.be/O2mM21mjmyY" class="video" data-fancybox>
+                                <picture>
+                                    <source srcset="img/webp/news1-poster.webp" type="image/webp">
+                                    <img src="img/news1-poster.jpg" alt="">
+                                </picture>
+                            </a>
+                            <p>Название видео и картинки</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--news-slider-->
+            <section class="section news-slider">
+                <div class="container">
+                    <h2 class="section__title section__title--sm">Другие новости</h2>
+                    <div class="tabs">
+                        <a href="#" class="tabs__item active">Последние</a>
+                        <a href="#" class="tabs__item">Похожие</a>
+                    </div>
+                    <div class="js-news">
+                        <div class="carousel">
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-3.webp" type="image/webp">
+                                            <img src="img/news-3.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-2.webp" type="image/webp">
+                                            <img src="img/news-2.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-1.webp" type="image/webp">
+                                            <img src="img/news-1.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-2.webp" type="image/webp">
+                                            <img src="img/news-2.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- counter-->
+                        <div class="counter">
+                            <span class="counter__current"></span>
+                            <span>\</span>
+                            <span class="counter__total"></span>
+                        </div>
+                        <!-- end counter-->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="container">
+      <!-- footerbar-->
+      <div class="footerbar">
+        <div class="footerbar__left">
+          <!-- logo--><a class="logo" href="index.html"><img src="img/icons/logo-white.svg" alt=""></a>
+          <!-- end logo-->
+        </div>
+        <div class="footerbar__center">
+          <!-- f-menu-->
+          <nav class="f-menu">
+            <div class="f-menu__col">
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Каталог</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Доставка</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Акции</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Где купить</a></div>
+            </div>
+            <div class="f-menu__col">
+              <div class="f-menu__item"><a class="f-menu__link" href="#">О компании</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Проекты</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Отзывы</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Контакты</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Шоурумы</a>
+                <div class="f-menu__second"><a class="f-menu__link" href="#">Магазины</a><a class="f-menu__link" href="#">Образцы в наличии</a><a class="f-menu__link" href="#">Контакты шоурумов</a></div>
+              </div>
+            </div>
+            <div class="f-menu__col">
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Для дизайнеров</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Для партнеров</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Дизайнеры</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Новости</a></div>
+            </div>
+          </nav>
+          <!-- end f-menu-->
+        </div>
+        <div class="footerbar__right">
+          <!-- f-contacts-->
+          <div class="f-contacts">
+            <!-- social-->
+            <nav class="social"><a class="social__link" href="#">Telegram</a><a class="social__link" href="#">WhatsApp</a><a class="social__link" href="#">Viber</a><a class="social__link" href="#">ВКонтакте</a></nav>
+            <!-- end social-->
+            <div class="f-contacts__col"><a class="f-contacts__link" href="tel:88003453455">8 800 345-34-55</a><a class="f-contacts__link" href="mailto:gravita@mail.ru">Gravita@mail.ru</a></div>
+          </div>
+          <!-- end f-contacts-->
+        </div>
+      </div>
+      <!-- end footerbar-->
+      <!-- bottom-->
+      <div class="bottom">
+        <div class="bottom__col">
+          <p class="bottom__text">2022 © All right reserved</p>
+        </div>
+        <div class="bottom__col">
+          <p class="bottom__text">сделано в <noindex><a class="dev" href="#" rel="nofollow"><svg><use href="img/icons/sprite.svg#logo-omni"></use></svg></a></noindex></p>
+        </div>
+        <div class="bottom__col">
+          <p class="bottom__text"><a href="#">Кукис &amp; Политика конфиденциальности</a></p>
+        </div>
+      </div>
+      <!-- end bottom-->
+    </div>
+  </footer>
+    </div>
+    <!-- modal-->
+<div class="modal js-modal" id="js-modal-callback">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Заказать обратный звонок</p>
+        <form action="">
+            <div class="form-group error">
+                <input type="text" name="#" placeholder="Имя"><span>Текст введен не верно, попробуйте снова</span>
+            </div>
+            <div class="form-group">
+                <input class="phone" type="tel" name="#" placeholder="Телефон">
+            </div>
+            <button class="modal__btn btn" type="submit"><span>Связаться со мной</span>
+                <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                </svg>
+            </button>
+            <p class="modal__text">*Отправляя заявку, я соглашаюсь с условиями<a href="#">Политикой
+                    конфиденциальности</a></p>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-thanks">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <div class="modal__wrap">
+            <p>Заявка успешно отправлена</p>
+            <p>Мы с вами скоро свяжемся</p>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-city">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Укажите свой город</p>
+        <!-- city-search-->
+        <div class="city-search">
+            <form class="city-search__form" action="">
+                <div class="form-group error">
+                    <input type="text" name="#" placeholder="Введите название"><span>Введенный вами город не
+                        найден</span>
+                </div>
+                <button type="submit">
+                    <svg>
+                        <use href="img/icons/sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="city-search__list">
+                <div class="city-search__col"><a class="city-search__link" href="#">Москва</a><a
+                        class="city-search__link" href="#">Санкт-Петербург</a><a class="city-search__link"
+                        href="#">Краснодар</a><a class="city-search__link" href="#">Благовещенск</a><a
+                        class="city-search__link" href="#">Владимир</a><a class="city-search__link"
+                        href="#">Волгоград</a><a class="city-search__link" href="#">Воронеж</a><a
+                        class="city-search__link" href="#">Екатеринбург</a><a class="city-search__link"
+                        href="#">Казань</a><a class="city-search__link" href="#">Калуга</a><a class="city-search__link"
+                        href="#">Комсомольск-на-Амуре</a><a class="city-search__link" href="#">Махачкала</a><a
+                        class="city-search__link" href="#">Нижний Новгород</a><a class="city-search__link"
+                        href="#">Новосибирск</a></div>
+                <div class="city-search__col"><a class="city-search__link" href="#">Пермь</a><a
+                        class="city-search__link" href="#">Ростов-на-Дону</a><a class="city-search__link"
+                        href="#">Рязань</a><a class="city-search__link" href="#">Сочи</a><a class="city-search__link"
+                        href="#">Тверь</a><a class="city-search__link" href="#">Тольятти</a><a class="city-search__link"
+                        href="#">Тула</a><a class="city-search__link" href="#">Тюмень</a><a class="city-search__link"
+                        href="#">Ульяновск</a><a class="city-search__link" href="#">Уссурийск</a><a
+                        class="city-search__link" href="#">Уфа</a><a class="city-search__link" href="#">Челябинск</a><a
+                        class="city-search__link" href="#">Якутск</a><a class="city-search__link" href="#"></a></div>
+            </div>
+        </div>
+        <!-- end city-search-->
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-share">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Поделитесь нашим товаром!</p>
+        <!-- share-list-->
+        <div class="share-list"><a class="share-list__item js-copy-product-link" href="#product-link"><img
+                    src="img/icons/link-variant.svg" alt=""><span>Скопировать ссылку</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/baseline-telegram.svg"
+                    alt=""><span>Телеграм</span></a><a class="share-list__item" href="#"><img
+                    src="img/icons/simple-icons_vk.svg" alt=""><span>VK</span></a><a class="share-list__item"
+                href="#"><img src="img/icons/baseline-whatsapp.svg" alt=""><span>WhatsApp</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/viber-outline.svg" alt=""><span>Viber</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/ok-ru.svg" alt=""><span>Одноклассники</span></a>
+        </div>
+        <!-- end share-list-->
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-order">
+    <div class="modal__inner">
+        <a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="h5">Вы уверены что хотите завершить оформление?</div>
+        <p>Введённые вами данные не сохранятся</p>
+        <a href="#" class="btn js-modal-close">
+            <span>продолжить оформление</span>
+            <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg>
+        </a>
+        <a href="#" class="btn btn-dark">
+            <span>Завершить оформление</span>
+            <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg>
+        </a>
+    </div>
+</div>
+<div class="modal js-modal stock-history" id="js-modal-stock-history">
+    <div class="modal__inner">
+        <a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="h4">История просмотра</div>
+        <div class="stock-history__items">
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card6.webp" type="image/webp">
+                        <img src="img/img-card6.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card5.webp" type="image/webp">
+                        <img src="img/img-card5.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card7.webp" type="image/webp">
+                        <img src="img/img-card7.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card5.webp" type="image/webp">
+                        <img src="img/img-card5.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card7.webp" type="image/webp">
+                        <img src="img/img-card7.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card6.webp" type="image/webp">
+                        <img src="img/img-card6.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal-->
+<!-- copy-label-->
+<div class="copy-label js-copy-label">
+    <span>Артикул скопирован</span>
+</div>
+<div class="copy-label copy-label--light js-copy-label-light">
+    <span>Ссылка скопирована</span>
+</div>
+<div class="copy-label copy-label--green js-copy-label-green">
+    <span>Товар добавлен в корзину</span>
+</div>
+<!-- end copy-label-->
+<script type="text/javascript" src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/new-pages.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/over.js"></script>
+</body>
+
+</html>

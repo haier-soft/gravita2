@@ -1,0 +1,367 @@
+.form {  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+     gap: 30px 40px;
+     align-items: flex-end;
+    &__footer {
+        grid-column: 1/2;
+    }
+    .form-group {
+        position: relative;
+        input, textarea {
+            background: transparent;
+        }
+        &.long {
+            grid-column: 1/3;
+        }
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: rgba(45, 42, 38, 0.8);
+        opacity: 1;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group__placeholder {
+        font-size: 18px;
+    }
+    .form-group textarea {
+        padding: 12px 4px;
+    }  
+    .form-group__placeholder {
+        letter-spacing: -0.04em;
+        color: rgba(45, 42, 38, 0.8);
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        user-select: none;
+        span {
+            display: inline;
+            color: #B62732;
+        }
+    }
+    .f-select{
+        display: block;
+        width: 100%;
+        padding: 0 4px;
+        border-bottom: 1px solid rgba(45,42,38,.4);
+        margin-bottom: 30px;
+        transition: .3s linear;
+    }
+    .f-select__header {
+        min-height: 43px;
+        flex-wrap: nowrap;
+        svg {
+            flex: 0 0 12px
+        }
+        span{
+            font-size: 18px;
+            line-height: 110%;
+            font-weight: 400;
+            letter-spacing: -0.04em;
+        }
+        > span {
+            display: flex;
+            column-gap: 10px;
+        }
+    }
+    .f-select.radio {
+        grid-area: 1/3/2/4;
+    }
+    .f-select:hover {
+        border-color: #2d2a26
+    }
+    &__btn {
+        width: 100%;
+        height: 55px;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+    &__text {
+        max-width: 328px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.1;
+        letter-spacing: -.04em;
+        color: rgba(45,42,38,.8);
+        a {
+            display: inline-block;
+            color: inherit;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: -1px;
+                width: 100%;
+                height: 1px;
+                background: rgba(45,42,38,.8);
+            }
+            &:hover::after {
+                animation: 1s linear border-link;
+            }
+        }
+    }
+    @media (max-width: 1599px) {
+        gap: 30px 20px;
+        .f-select__header{
+            min-height: 41px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group__placeholder,
+        .f-select__header span{
+            font-size: 16px;
+        }
+        &__btn {
+            margin: 0 0 15px;
+        }
+    }
+    @media (max-width: 991px) {
+        display: block;
+        .form-group, .f-select {
+            margin-bottom: 40px;
+        }
+        &__footer {
+            margin-top: 60px;
+        }
+        &__btn {
+            margin: 0 0 24px;
+        }
+    }
+    @media (max-width: 767px) {
+        .form-group input,
+        .form-group textarea,
+        .form-group__placeholder,
+        .f-select__header span{
+            font-size: 14px;
+        }
+        .f-select__list {
+            margin-bottom: 10px;
+        }
+    }
+    @media (max-width: 575px) {
+        .f-select__header {
+            min-height: 39px;
+        }
+    }
+}
+.f-select__radio {
+    padding: 4px 6px 4px 8px;
+    input {
+        display: none;
+    }
+    input:checked + label::after {
+        opacity: 1;
+    }
+    label {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        padding-right: 25px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(45,42,38,.8);
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(45,42,38,.4);
+            border-radius: 50%;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #2D2A26;
+            border-radius: 50%;
+            opacity: 0;
+        }
+    }
+    @media screen and (max-width: 1859px) {
+        label {
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        label {
+            font-size: 12px;
+        }
+    }
+}
+.file-form {
+    grid-area: 1/3/4/4;
+    align-self: start;
+	label {
+        width: 100%;
+        height: 42px;
+        justify-content: space-between;
+        border: 0;
+        border-bottom: 1px solid rgba(45,42,38,.4);
+        padding: 0 0 0 32px;
+        background: url(../img/icons/form-file.svg) center left no-repeat;
+        cursor: pointer;
+        input {
+           display: none;
+        }
+        span {
+            display: block;
+            font-size: 18px;
+        }
+        svg {
+            flex: 0 0 22px;
+            width: 22px;
+            height: 22px;
+        }
+        &:focus, &:hover {
+            border-color: #2d2a26;
+        }
+	}
+	&__items {
+        max-width: 391px;
+        margin-left: auto;
+	}
+	&__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16.5px;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: -0.04em;
+        color: rgba(45, 42, 38, 0.5);
+        &:first-child {
+            margin-top: 20px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+	}
+    &__name {
+        word-break: break-word;
+    }
+	&__del {
+        flex: 0 0 12px;
+        cursor: pointer;
+        svg {       
+            width: 12px;
+            height: 14px;
+            fill: rgba(45, 42, 38, 0.5);          
+        }
+	}
+    @media (max-width: 1599px) {
+        label {
+            background-size: 20px 20px;
+        }
+        label span {
+            font-size: 16px;
+        }
+        &__items {
+            max-width: 320px;
+        }
+        &__item {
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 767px) {
+        label {
+            background-size: 18px 18px;
+            height: 40px;
+        }
+        label span {
+            font-size: 14px;
+        }
+        &__items {
+            max-width: none;
+        }
+    }
+}
+.feedback-form {
+    .form-group {
+        &.textarea {
+            grid-column: 1/3;
+            textarea {
+               height: 155px; 
+               @media (max-width: 1859px) {
+                height: 148px;
+               }
+               @media (max-width: 1599px) {
+                height: 130px;
+               }
+               @media (max-width: 991px) {
+                height: 150px;
+               }
+               @media (max-width: 767px) {
+                height: 180px;
+               }
+               
+            }          
+        }
+    }
+    .form__btn {
+        max-width: 480px;
+    }
+    @media (max-width: 991px) {
+        .form__btn {
+            max-width: none;
+        }
+    }
+}
+
+.join-us-form {
+    .form__btn {
+        max-width: 81%;
+    }
+    @media (max-width: 1599px) {
+        .form__btn {
+            max-width: none;
+        }
+    }
+}
+.partners-form {
+    .form-group {
+        &.textarea {
+            grid-area: 2/2/4/4;
+            align-self: stretch;   
+            textarea {
+                height: 100%;
+            }     
+        }
+    }
+    @media (max-width: 991px) {
+        .form-group {           
+            &.textarea { 
+                textarea {
+                    height: 150px;
+                }     
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .form-group {
+            &.textarea { 
+                textarea {
+                    height: 180px;
+                }     
+            }
+        }
+    }
+}
+
+

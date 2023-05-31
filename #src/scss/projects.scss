@@ -1,0 +1,110 @@
+.projects .project-card:nth-child(4n+2),
+.projects .project-card:nth-child(4n-1),
+.projects .project-card:nth-child(2) {
+    .project-card__img {
+        padding-top: 67.1%;
+    }
+}
+.projects .project-card__header {
+    margin-bottom: 30px;
+}
+.projects .project-card__img {
+    padding-top: 100.6%;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180.12deg, rgba(0, 0, 0, 0) 39.64%, rgba(0, 0, 0, 0.135859) 58.68%, rgba(0, 0, 0, 0.5) 85.21%);
+    }
+}
+.projects .project-card__title {
+    margin: 0 0 20px;
+}
+.projects .project-card__desc {
+    max-width: 452px;
+    margin-bottom: 20px;
+}
+.projects .project-card__labels {
+    right: 93px;
+}
+.projects .project-card__labels span {
+    backdrop-filter: blur(2.5px);
+    align-items: flex-start;
+}
+.project-card__links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 4px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.project-card__city  {
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: rgba(45, 42, 38, 0.6);
+    margin: 0 0 20px;
+}
+.designer__desc {
+    a {
+        color: inherit;
+    }
+}
+@media (max-width: 1859px) {
+    .projects .project-card__desc {
+        max-width: 493px;
+    }
+}
+@media (max-width: 1599px) {
+    .projects .project-card__desc {
+        max-width: 305px;
+    }
+}
+@media (max-width: 1279px) {
+    .projects .project-card__labels {
+        right: 39px;
+    }
+    .projects .project-card__desc {
+        max-width: 452px;
+    }
+}
+@media (max-width: 991px) {
+    .projects .project-card__header{
+       margin-bottom: 20px;
+    }
+    .projects .project-card__labels{
+        right: 80px;
+     }
+    .projects .project-card__title,
+    .projects .project-card__desc,
+    .project-card__city {
+        margin: 0 0 15px;
+    }
+    .projects .project-card:nth-child(4n+2),
+    .projects .project-card:nth-child(4n-1),
+    .projects .project-card:nth-child(2) {
+        .project-card__img {
+           padding-top: 100.6%
+        }
+     }
+    .projects .project-card:nth-child(2n) {
+        .project-card__img {
+            padding-top: 67.1%;
+        }
+    } 
+}
+@media (max-width: 767px) {
+    .projects .project-card__labels {
+        right: 30px;
+    }
+}
+@media (max-width: 379px) {
+    .projects .project-card__labels {
+        right: 10px;
+    }
+}

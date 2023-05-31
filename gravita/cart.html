@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="css/dunya.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.min.css" type="text/css" rel="stylesheet">
+    <link href="css/over.css" type="text/css" rel="stylesheet">
+    <link href="css/daniel.css" type="text/css" rel="stylesheet">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <title>Gravita</title>
+</head>
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/iconsprite/sprite.svg"
+        title="Ваш браузер не поддерживает SVG"></object>
+    <div id="panel">
+    </div>
+    <div class="wrap">
+        <header class="header">
+    <!-- dropdown-->
+    <div class="dropdown">
+      <div class="dropdown__inner">
+        <div class="dropdown__wrap">
+          <div class="dropdown__header">
+            <!-- location-->
+            <div class="location"><a class="location__link" href="#"> г. Москва</a>
+              <div class="location__dropdown">
+                <p class="location__text">Мы определили ваш город:<span>Москва</span></p><a class="location__confirm btn" href="#"><span>Верно</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a><a class="location__btn btn js-modal-show" href="#js-modal-city"><span>выбрать другой</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <!-- end location-->
+            <!-- search-btn--><a class="search-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#search"></use>
+              </svg></a>
+            <!-- end search-btn-->
+            <!-- basket-btn--><a class="basket-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#cart"></use>
+              </svg><span>25</span></a>
+            <!-- end basket-btn-->
+          </div>
+          <p class="dropdown__title">Меню</p>
+          <!-- menu-->
+          <nav class="menu">
+            <div class="menu__col">
+              <div class="menu__item"><a class="menu__link" href="#">Каталог</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Акции</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Проекты</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Дизайнеры</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Шоурумы</a>
+                <div class="menu__second"><a class="menu__link" href="#">Магазины</a><a class="menu__link" href="#">Образцы в наличии</a><a class="menu__link" href="#">Контакты шоурумов</a></div>
+              </div>
+            </div>
+            <div class="menu__col">
+              <div class="menu__item"><a class="menu__link" href="#">О компании</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Контакты</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Отзывы</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Для дизайнеров</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Новости</a></div>
+              <div class="menu__item"><a class="menu__link" href="#">Для партнеров</a></div>
+            </div>
+          </nav>
+          <!-- end menu-->
+          <div class="dropdown__footer"><a class="dropdown__tel" href="tel:88003453455">8 800 345-34-55</a>
+            <!-- callback-btn--><a class="callback-btn btn js-modal-show" href="#js-modal-callback"><span>Заказать звонок</span>
+              <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+              </svg></a>
+            <!-- end callback-btn-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end dropdown-->
+    <!-- search-->
+    <div class="search">
+      <div class="search__inner">
+        <form class="search__form" action="">
+          <div class="form-group">
+            <input type="text" name="#" placeholder="">
+          </div>
+          <button type="submit">
+            <svg>
+              <use href="img/icons/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="search__wrap">
+          <div class="search__results">
+            <p class="search__text">Найдено 8 результатов</p>
+            <div class="search__list">
+              <!-- search-card--><a class="search-card" href="#">
+                <div class="search-card__img">
+                  <picture>
+                    <source srcset="img/webp/img-search1.webp" type="image/webp"><img src="img/img-search1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="search-card__desc">
+                  <p><strong>Наст</strong>ененная панель Gravita M578 c датчиком</p>
+                </div></a>
+              <!-- end search-card-->
+              <!-- search-card--><a class="search-card" href="#">
+                <div class="search-card__img">
+                  <picture>
+                    <source srcset="img/webp/img-search2.webp" type="image/webp"><img src="img/img-search2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="search-card__desc">
+                  <p><strong>Наст</strong>ененная панель Gravita M578 c датчиком</p>
+                </div></a>
+              <!-- end search-card-->
+              <!-- search-card--><a class="search-card" href="#">
+                <div class="search-card__img">
+                  <picture>
+                    <source srcset="img/webp/img-search3.webp" type="image/webp"><img src="img/img-search3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="search-card__desc">
+                  <p><strong>Наст</strong>ененная панель Gravita M578 c датчиком</p>
+                </div></a>
+              <!-- end search-card-->
+            </div>
+            <div class="search__links"><a class="search__link" href="#">Плитка Ceramogran</a><a class="search__link" href="#">Пэтчворк</a><a class="search__link" href="#">Meisseon Neo</a><a class="search__link" href="#">Мозаика</a><a class="search__link" href="#">Гранит</a></div>
+          </div><a class="search__btn btn" href="#"><span>Все результаты</span>
+            <svg>
+              <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <!-- end search-->
+    <div class="container">
+      <div class="header__wrap">
+        <div class="header__row">
+          <div class="header__left">
+            <!-- logo--><a class="logo" href="index.html"><img src="img/icons/logo.svg" alt=""></a>
+            <!-- end logo-->
+          </div>
+          <div class="header__cleft">
+            <!-- location-->
+            <div class="location"><a class="location__link" href="#"> г. Москва</a>
+              <div class="location__dropdown">
+                <p class="location__text">Мы определили ваш город:<span>Москва</span></p><a class="location__confirm btn" href="#"><span>Верно</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a><a class="location__btn btn js-modal-show" href="#js-modal-city"><span>выбрать другой</span>
+                  <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <!-- end location-->
+          </div>
+          <div class="header__cright">
+            <!-- top-menu-->
+            <nav class="top-menu"><a class="top-menu__link" href="#">Каталог</a><a class="top-menu__link" href="#">Акции</a><a class="top-menu__link" href="#">Доставка</a><a class="top-menu__link" href="#">Где купить</a></nav>
+            <!-- end top-menu-->
+          </div>
+          <div class="header__right">
+            <!-- search-btn--><a class="search-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#search"></use>
+              </svg></a>
+            <!-- end search-btn-->
+            <!-- basket-btn--><a class="basket-btn" href="#">
+              <svg>
+                <use href="img/icons/sprite.svg#cart"></use>
+              </svg><span>25</span></a>
+            <!-- end basket-btn-->
+            <!-- tel--><a class="tel" href="tel:88003453455">8 800 345-34-55</a>
+            <!-- end tel-->
+            <!-- menu-toggle-->
+            <div class="menu-toggle"><span></span><span></span><span></span></div>
+            <!-- end menu-toggle-->
+            <!-- search-close-->
+            <div class="search-close"><span></span><span></span><span></span></div>
+            <!-- end search-close-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+        <main>
+            <div class="container">
+                <!-- breadcrumbs-->
+                <nav class="breadcrumbs">
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Главная</span></a></div>
+                    <div class="breadcrumbs__item"><span>Корзина</span></div>
+                </nav>
+            </div>
+            <section class="section cart">
+                <div class="container">
+                    <h1 class="title">Корзина (4)</h1>
+                    <form action="" class="cart-form">
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card6.webp" type="image/webp">
+                                            <img src="img/img-card6.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div>
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price">12,847₽ / м<sup>2</sup></div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="60.80">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit1" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit1">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit1">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card5.webp" type="image/webp">
+                                            <img src="img/img-card5.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div> 
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price item-cart__price--red">12,847₽ / м<sup>2</sup>
+                                    <span>12,847₽ / м<sup>2</sup></span>
+                                </div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="1">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit2" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit2">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit2">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card7.webp" type="image/webp">
+                                            <img src="img/img-card7.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div> 
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price">12,847₽ / м<sup>2</sup></div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="1">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit3" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit3">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit3">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card5.webp" type="image/webp">
+                                            <img src="img/img-card5.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div>    
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price item-cart__price--red">12,847₽ / м<sup>2</sup>
+                                    <span>12,847₽ / м<sup>2</sup></span>
+                                </div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="1">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit4" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit4">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit4">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="cart__bottom">
+                        <div class="cart-promo">  
+                            <div class="cart-promo__header">
+                                <h3>Промокод</h3>
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                            <div class="cart-promo__content">
+                                <form action="" class="promocode">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Например 95A86Gf">
+                                    </div>
+                                    <button class="btn promocode__btn" type="submit">
+                                        <span>Применить</span>
+                                        <svg>
+                                            <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="cart-sum">
+                            <h3 class="cart-sum__finalprice">Итого:<span>1,154,000 ₽</span></h3>
+                            <div class="cart-sum__totalprice">Сумма без скидки:<span>1,304,450 ₽</span></div>
+                            <div class="cart-sum__discount">Скидка:<span>45,000 ₽</span></div>
+                            <a href="#" class="btn btn-dark cart-sum__btn">
+                                <span>Оформить заказ</span>
+                                <svg>
+                                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="container">
+      <!-- footerbar-->
+      <div class="footerbar">
+        <div class="footerbar__left">
+          <!-- logo--><a class="logo" href="index.html"><img src="img/icons/logo-white.svg" alt=""></a>
+          <!-- end logo-->
+        </div>
+        <div class="footerbar__center">
+          <!-- f-menu-->
+          <nav class="f-menu">
+            <div class="f-menu__col">
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Каталог</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Доставка</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Акции</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Где купить</a></div>
+            </div>
+            <div class="f-menu__col">
+              <div class="f-menu__item"><a class="f-menu__link" href="#">О компании</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Проекты</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Отзывы</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Контакты</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Шоурумы</a>
+                <div class="f-menu__second"><a class="f-menu__link" href="#">Магазины</a><a class="f-menu__link" href="#">Образцы в наличии</a><a class="f-menu__link" href="#">Контакты шоурумов</a></div>
+              </div>
+            </div>
+            <div class="f-menu__col">
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Для дизайнеров</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Для партнеров</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Дизайнеры</a></div>
+              <div class="f-menu__item"><a class="f-menu__link" href="#">Новости</a></div>
+            </div>
+          </nav>
+          <!-- end f-menu-->
+        </div>
+        <div class="footerbar__right">
+          <!-- f-contacts-->
+          <div class="f-contacts">
+            <!-- social-->
+            <nav class="social"><a class="social__link" href="#">Telegram</a><a class="social__link" href="#">WhatsApp</a><a class="social__link" href="#">Viber</a><a class="social__link" href="#">ВКонтакте</a></nav>
+            <!-- end social-->
+            <div class="f-contacts__col"><a class="f-contacts__link" href="tel:88003453455">8 800 345-34-55</a><a class="f-contacts__link" href="mailto:gravita@mail.ru">Gravita@mail.ru</a></div>
+          </div>
+          <!-- end f-contacts-->
+        </div>
+      </div>
+      <!-- end footerbar-->
+      <!-- bottom-->
+      <div class="bottom">
+        <div class="bottom__col">
+          <p class="bottom__text">2022 © All right reserved</p>
+        </div>
+        <div class="bottom__col">
+          <p class="bottom__text">сделано в <noindex><a class="dev" href="#" rel="nofollow"><svg><use href="img/icons/sprite.svg#logo-omni"></use></svg></a></noindex></p>
+        </div>
+        <div class="bottom__col">
+          <p class="bottom__text"><a href="#">Кукис &amp; Политика конфиденциальности</a></p>
+        </div>
+      </div>
+      <!-- end bottom-->
+    </div>
+  </footer>
+    </div>
+    <!-- modal-->
+<div class="modal js-modal" id="js-modal-callback">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Заказать обратный звонок</p>
+        <form action="">
+            <div class="form-group error">
+                <input type="text" name="#" placeholder="Имя"><span>Текст введен не верно, попробуйте снова</span>
+            </div>
+            <div class="form-group">
+                <input class="phone" type="tel" name="#" placeholder="Телефон">
+            </div>
+            <button class="modal__btn btn" type="submit"><span>Связаться со мной</span>
+                <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                </svg>
+            </button>
+            <p class="modal__text">*Отправляя заявку, я соглашаюсь с условиями<a href="#">Политикой
+                    конфиденциальности</a></p>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-thanks">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <div class="modal__wrap">
+            <p>Заявка успешно отправлена</p>
+            <p>Мы с вами скоро свяжемся</p>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-city">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Укажите свой город</p>
+        <!-- city-search-->
+        <div class="city-search">
+            <form class="city-search__form" action="">
+                <div class="form-group error">
+                    <input type="text" name="#" placeholder="Введите название"><span>Введенный вами город не
+                        найден</span>
+                </div>
+                <button type="submit">
+                    <svg>
+                        <use href="img/icons/sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="city-search__list">
+                <div class="city-search__col"><a class="city-search__link" href="#">Москва</a><a
+                        class="city-search__link" href="#">Санкт-Петербург</a><a class="city-search__link"
+                        href="#">Краснодар</a><a class="city-search__link" href="#">Благовещенск</a><a
+                        class="city-search__link" href="#">Владимир</a><a class="city-search__link"
+                        href="#">Волгоград</a><a class="city-search__link" href="#">Воронеж</a><a
+                        class="city-search__link" href="#">Екатеринбург</a><a class="city-search__link"
+                        href="#">Казань</a><a class="city-search__link" href="#">Калуга</a><a class="city-search__link"
+                        href="#">Комсомольск-на-Амуре</a><a class="city-search__link" href="#">Махачкала</a><a
+                        class="city-search__link" href="#">Нижний Новгород</a><a class="city-search__link"
+                        href="#">Новосибирск</a></div>
+                <div class="city-search__col"><a class="city-search__link" href="#">Пермь</a><a
+                        class="city-search__link" href="#">Ростов-на-Дону</a><a class="city-search__link"
+                        href="#">Рязань</a><a class="city-search__link" href="#">Сочи</a><a class="city-search__link"
+                        href="#">Тверь</a><a class="city-search__link" href="#">Тольятти</a><a class="city-search__link"
+                        href="#">Тула</a><a class="city-search__link" href="#">Тюмень</a><a class="city-search__link"
+                        href="#">Ульяновск</a><a class="city-search__link" href="#">Уссурийск</a><a
+                        class="city-search__link" href="#">Уфа</a><a class="city-search__link" href="#">Челябинск</a><a
+                        class="city-search__link" href="#">Якутск</a><a class="city-search__link" href="#"></a></div>
+            </div>
+        </div>
+        <!-- end city-search-->
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-share">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Поделитесь нашим товаром!</p>
+        <!-- share-list-->
+        <div class="share-list"><a class="share-list__item js-copy-product-link" href="#product-link"><img
+                    src="img/icons/link-variant.svg" alt=""><span>Скопировать ссылку</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/baseline-telegram.svg"
+                    alt=""><span>Телеграм</span></a><a class="share-list__item" href="#"><img
+                    src="img/icons/simple-icons_vk.svg" alt=""><span>VK</span></a><a class="share-list__item"
+                href="#"><img src="img/icons/baseline-whatsapp.svg" alt=""><span>WhatsApp</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/viber-outline.svg" alt=""><span>Viber</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/ok-ru.svg" alt=""><span>Одноклассники</span></a>
+        </div>
+        <!-- end share-list-->
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-order">
+    <div class="modal__inner">
+        <a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="h5">Вы уверены что хотите завершить оформление?</div>
+        <p>Введённые вами данные не сохранятся</p>
+        <a href="#" class="btn js-modal-close">
+            <span>продолжить оформление</span>
+            <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg>
+        </a>
+        <a href="#" class="btn btn-dark">
+            <span>Завершить оформление</span>
+            <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg>
+        </a>
+    </div>
+</div>
+<div class="modal js-modal stock-history" id="js-modal-stock-history">
+    <div class="modal__inner">
+        <a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="h4">История просмотра</div>
+        <div class="stock-history__items">
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card6.webp" type="image/webp">
+                        <img src="img/img-card6.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card5.webp" type="image/webp">
+                        <img src="img/img-card5.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card7.webp" type="image/webp">
+                        <img src="img/img-card7.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card5.webp" type="image/webp">
+                        <img src="img/img-card5.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card7.webp" type="image/webp">
+                        <img src="img/img-card7.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card6.webp" type="image/webp">
+                        <img src="img/img-card6.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal-->
+<!-- copy-label-->
+<div class="copy-label js-copy-label">
+    <span>Артикул скопирован</span>
+</div>
+<div class="copy-label copy-label--light js-copy-label-light">
+    <span>Ссылка скопирована</span>
+</div>
+<div class="copy-label copy-label--green js-copy-label-green">
+    <span>Товар добавлен в корзину</span>
+</div>
+<!-- end copy-label-->
+<script type="text/javascript" src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/new-pages.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/over.js"></script>
+</body>
+
+</html>

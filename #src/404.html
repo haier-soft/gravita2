@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include("_head.html")
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/iconsprite/sprite.svg"
+        title="Ваш браузер не поддерживает SVG"></object>
+    <div id="panel">
+    </div>
+    <div class="wrap">
+        @@include("_header.html")
+        <main>
+            <!--notfound-->
+            <div class="notfound">
+                <div class="notfound__text">
+                    <span>Error</span>
+                    <span>404</span>
+                    <span>error</span>                   
+                </div>
+                <div class="container">
+                    <h4>Упс! что-то пошло не так</h4>
+                    <a href="#" class="btn btn-dark">
+                        <span>На главную</span>
+                        <svg><use xlink:href="img/icons/sprite.svg#arrow-bottom-right"></use></svg></a>
+                    </a>
+                </div>
+                <div class="notfound__img notfound__img-1">
+                    <picture>
+                        <source srcset="img/webp/404-left.webp" type="image/webp">
+                        <img src="img/404-left.png" alt="">
+                    </picture>
+                </div>
+                <div class="notfound__img notfound__img-2">
+                    <picture>
+                        <source srcset="img/webp/404-right.webp" type="image/webp">
+                        <img src="img/404-right.png" alt="">
+                    </picture>                   
+                </div>
+            </div>   
+        </main>
+        @@include("_footer.html")
+    </div>
+    @@include("_fixed-el.html")
+</body>
+
+</html>

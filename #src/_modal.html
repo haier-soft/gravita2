@@ -1,0 +1,253 @@
+<!-- modal-->
+<div class="modal js-modal" id="js-modal-callback">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Заказать обратный звонок</p>
+        <form action="">
+            <div class="form-group error">
+                <input type="text" name="#" placeholder="Имя"><span>Текст введен не верно, попробуйте снова</span>
+            </div>
+            <div class="form-group">
+                <input class="phone" type="tel" name="#" placeholder="Телефон">
+            </div>
+            <button class="modal__btn btn" type="submit"><span>Связаться со мной</span>
+                <svg>
+                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                </svg>
+            </button>
+            <p class="modal__text">*Отправляя заявку, я соглашаюсь с условиями<a href="#">Политикой
+                    конфиденциальности</a></p>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-thanks">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <div class="modal__wrap">
+            <p>Заявка успешно отправлена</p>
+            <p>Мы с вами скоро свяжемся</p>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-city">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Укажите свой город</p>
+        <!-- city-search-->
+        <div class="city-search">
+            <form class="city-search__form" action="">
+                <div class="form-group error">
+                    <input type="text" name="#" placeholder="Введите название"><span>Введенный вами город не
+                        найден</span>
+                </div>
+                <button type="submit">
+                    <svg>
+                        <use href="img/icons/sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="city-search__list">
+                <div class="city-search__col"><a class="city-search__link" href="#">Москва</a><a
+                        class="city-search__link" href="#">Санкт-Петербург</a><a class="city-search__link"
+                        href="#">Краснодар</a><a class="city-search__link" href="#">Благовещенск</a><a
+                        class="city-search__link" href="#">Владимир</a><a class="city-search__link"
+                        href="#">Волгоград</a><a class="city-search__link" href="#">Воронеж</a><a
+                        class="city-search__link" href="#">Екатеринбург</a><a class="city-search__link"
+                        href="#">Казань</a><a class="city-search__link" href="#">Калуга</a><a class="city-search__link"
+                        href="#">Комсомольск-на-Амуре</a><a class="city-search__link" href="#">Махачкала</a><a
+                        class="city-search__link" href="#">Нижний Новгород</a><a class="city-search__link"
+                        href="#">Новосибирск</a></div>
+                <div class="city-search__col"><a class="city-search__link" href="#">Пермь</a><a
+                        class="city-search__link" href="#">Ростов-на-Дону</a><a class="city-search__link"
+                        href="#">Рязань</a><a class="city-search__link" href="#">Сочи</a><a class="city-search__link"
+                        href="#">Тверь</a><a class="city-search__link" href="#">Тольятти</a><a class="city-search__link"
+                        href="#">Тула</a><a class="city-search__link" href="#">Тюмень</a><a class="city-search__link"
+                        href="#">Ульяновск</a><a class="city-search__link" href="#">Уссурийск</a><a
+                        class="city-search__link" href="#">Уфа</a><a class="city-search__link" href="#">Челябинск</a><a
+                        class="city-search__link" href="#">Якутск</a><a class="city-search__link" href="#"></a></div>
+            </div>
+        </div>
+        <!-- end city-search-->
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-share">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <p class="modal__title">Поделитесь нашим товаром!</p>
+        <!-- share-list-->
+        <div class="share-list"><a class="share-list__item js-copy-product-link" href="#product-link"><img
+                    src="img/icons/link-variant.svg" alt=""><span>Скопировать ссылку</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/baseline-telegram.svg"
+                    alt=""><span>Телеграм</span></a><a class="share-list__item" href="#"><img
+                    src="img/icons/simple-icons_vk.svg" alt=""><span>VK</span></a><a class="share-list__item"
+                href="#"><img src="img/icons/baseline-whatsapp.svg" alt=""><span>WhatsApp</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/viber-outline.svg" alt=""><span>Viber</span></a><a
+                class="share-list__item" href="#"><img src="img/icons/ok-ru.svg" alt=""><span>Одноклассники</span></a>
+        </div>
+        <!-- end share-list-->
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-order">
+    <div class="modal__inner">
+        <a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="h5">Вы уверены что хотите завершить оформление?</div>
+        <p>Введённые вами данные не сохранятся</p>
+        <a href="#" class="btn js-modal-close">
+            <span>продолжить оформление</span>
+            <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg>
+        </a>
+        <a href="#" class="btn btn-dark">
+            <span>Завершить оформление</span>
+            <svg>
+                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+            </svg>
+        </a>
+    </div>
+</div>
+<div class="modal js-modal stock-history" id="js-modal-stock-history">
+    <div class="modal__inner">
+        <a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="h4">История просмотра</div>
+        <div class="stock-history__items">
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card6.webp" type="image/webp">
+                        <img src="img/img-card6.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card5.webp" type="image/webp">
+                        <img src="img/img-card5.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card7.webp" type="image/webp">
+                        <img src="img/img-card7.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card5.webp" type="image/webp">
+                        <img src="img/img-card5.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card7.webp" type="image/webp">
+                        <img src="img/img-card7.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="item-stock">
+                <a href="#" class="item-stock__img">
+                    <picture>
+                        <source srcset="img/webp/img-card6.webp" type="image/webp">
+                        <img src="img/img-card6.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="item-stock__details">
+                    <a href="#" class="item-stock__name">CHRONOS 40x30</a>
+                    <div class="item-stock__det">Цвет<span>желтый</span></div>
+                    <div class="item-stock__det">Арт.<span>846327</span></div>
+                    <div class="item-stock__det">Размер<span>40х30</span></div>
+                    <div class="item-stock__det"><span>12,847₽ / м2</span></div>
+                </div>
+                <a href="#" class="item-stock__add">
+                    <svg>
+                       <use href="img/icons/sprite.svg#plus"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal-->

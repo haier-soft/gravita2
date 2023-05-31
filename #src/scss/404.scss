@@ -1,0 +1,128 @@
+.notfound {
+    padding-bottom: 150px;
+    overflow: hidden;
+    position: relative;
+    &__img {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            max-height: 100%;
+            max-width: 99%;
+        }
+    }
+    &__img-1 {
+        left: 0;
+        z-index: -1;
+        img {
+            right: 0;
+        }
+    }
+    &__img-2 {
+        right: 0;
+        img {
+            left: 0;
+            
+        }
+    }
+    &__text{      
+        font-size: 260px;
+        line-height: 110%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: #2D2A26;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 250px;
+        margin-bottom: 98px;
+        span:nth-child(2) {
+            font-size: 280px;
+            margin: 0 0.21em;
+        }
+    }
+    .container {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    .btn {
+        width: 288px;
+        height: 55px;
+        margin: 40px auto 0;
+    }
+    @media (max-width: 1859px) {
+        padding-bottom: 120px;
+        &__img img {
+            max-height: 94%;
+        }
+        &__text {
+            padding-top: 200px;
+            margin-bottom: 80px;
+            font-size: 13.75vw;
+            span:nth-child(2) {
+                font-size: 15vw;
+                margin: 0 0.24em;
+            }
+        }
+    }
+    @media (max-width: 1599px) {
+        &__text {
+            padding-top: 215px;
+            margin-bottom: 60px;
+        }
+    }
+    @media (max-width: 1279px) {
+        padding-bottom: 80px;
+        &__text {
+            padding-top: 144px;
+            span:nth-child(2) {
+                margin: 0 0.35em;
+            }
+        }
+        &__img {
+            height: 80%;
+            top: 25px;
+            img {
+                max-height: 90%;
+            }
+        }
+        h4 {
+            max-width: 242px;
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: 767px) {
+        &__text {
+            padding-top: 30px;
+            flex-direction: column;
+            font-size: 110px;
+            margin-bottom: 50px;
+            span:nth-child(2) {
+                font-size: 130px;
+            }
+        }
+        &__img {
+            z-index: -1;
+            height: 43%;
+            top: 80px;
+            filter: blur(1.5px); 
+            img {
+                max-width: 150%;
+            }      
+        }
+    }
+    @media (max-width: 379px) {
+        &__text {
+            font-size: 100px;
+            span:nth-child(2) {
+                font-size: 120px;
+            }
+        }
+    }
+}

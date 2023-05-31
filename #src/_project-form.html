@@ -1,0 +1,51 @@
+<!--project form-->
+<section class="section">
+    <div class="container">
+        <h2 class="section__title section__title--sm">Присоединиться к проекту</h2>
+        <form action="" class="form" onsubmit="event.preventDefault(); formOnSuccess(this)">
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Фио*">
+            </div>
+            <div class="form-group">
+                <input class="phone" type="tel" name="#" placeholder="Контактный номер*">
+            </div>
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Опыт работы">
+            </div>
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Направление в дизайне">
+            </div>
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Стиль">
+            </div>
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Стоимость работы">
+            </div>
+            <div class="file-form">
+                <label class="btn">
+                    <input type="file" multiple name="#">
+                    <span>Прикрепить файл</span>
+                    <svg><use xlink:href="img/icons/sprite.svg#arrow-bottom-right"></use></svg>
+                </label>
+                <div class="file-form__items">
+                    <div class="file-form__item">
+                        <span class="file-form__name">Название файла.JPG</span>
+                        <span class="file-form__del"><svg><use href="img/icons/sprite.svg#del-item"></use></svg></span>
+                    </div>
+                    <div class="file-form__item">
+                        <span class="file-form__name">Портфолио Валентина Петрова 2023.PDF</span>
+                        <span class="file-form__del"><svg><use href="img/icons/sprite.svg#del-item"></use></svg></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form__footer">
+                <button class="btn btn-dark form__btn" type="submit"><span>Присоединиться</span>
+                    <svg>
+                      <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                    </svg>
+                  </button>
+                <p class="form__text">*Отправляя заявку, я соглашаюсь с условиями <a href="#">Политикой конфиденциальности</a></p>
+            </div>
+          </form>
+    </div>
+</section>

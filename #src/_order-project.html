@@ -1,0 +1,83 @@
+<!--form-->
+<section class="section">
+    <div class="container">
+        <h2 class="section__title section__title--sm">Связаться с дизайнером</h2>
+        <form action="" class="form order-project-form" onsubmit="event.preventDefault(); formOnSuccess(this)">
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Фио*">
+                <span>Текст введен не верно, попробуйте снова</span>
+            </div>
+            <div class="form-group">
+                <input class="phone" type="tel" name="#" placeholder="Контактный номер*">
+            </div>
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Тип помещения">
+            </div>
+            <div class="form-group">
+                <input type="text" name="#" placeholder="Площадь помещения">
+            </div>
+            <div class="f-select radio">
+                <div class="f-select__header"><span>Дизайнер: <span class="f-select__selected">Валентина
+                            Самойлова</span></span>
+                    <svg>
+                        <use href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                </div>
+                <div class="f-select__list">
+                    <div class="f-select__radio ">
+                        <input id="radio1" type="radio" name="designer" checked>
+                        <label for="radio1">Валентина Самойлова</label>
+                    </div>
+                    <div class="f-select__radio">
+                        <input id="radio2" type="radio" name="designer">
+                        <label for="radio2">Светлана Малюк</label>
+                    </div>
+                </div>
+            </div>
+            <div class="f-select">
+                <div class="f-select__header">
+                    <span>Стиль: <span>Выберите стиль</span></span>
+                    <mark>8</mark>
+                    <svg>
+                        <use href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                </div>
+                <div class="f-select__list">
+                    <div class="f-select__checkbox">
+                        <input id="check101" type="checkbox" name="#">
+                        <label for="check101">Стиль</label>
+                    </div>
+                    <div class="f-select__checkbox">
+                        <input id="check102" type="checkbox" name="#">
+                        <label for="check102">Стиль</label>
+                    </div>
+                    <div class="f-select__checkbox">
+                        <input id="check103" type="checkbox" name="#">
+                        <label for="check103">Стиль</label>
+                    </div>
+                    <div class="f-select__checkbox">
+                        <input id="check104" type="checkbox" name="#">
+                        <label for="check104">Стиль</label>
+                    </div>
+                    <div class="f-select__checkbox">
+                        <input id="check105" type="checkbox" name="#">
+                        <label for="check105">Стиль</label>
+                    </div>
+                    <div class="f-select__checkbox">
+                        <input id="check106" type="checkbox" name="#">
+                        <label for="check106">Стиль</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__footer">
+                <button class="form__btn btn btn-dark" type="submit"><span>Заказать проект</span>
+                    <svg>
+                        <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                    </svg>
+                </button>
+                <p class="form__text">*Отправляя заявку, я соглашаюсь с условиями <a href="#">Политикой
+                        конфиденциальности</a></p>
+            </div>
+        </form>
+    </div>
+</section>

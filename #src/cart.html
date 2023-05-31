@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include("_head.html")
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/iconsprite/sprite.svg"
+        title="Ваш браузер не поддерживает SVG"></object>
+    <div id="panel">
+    </div>
+    <div class="wrap">
+        @@include("_header.html")
+        <main>
+            <div class="container">
+                <!-- breadcrumbs-->
+                <nav class="breadcrumbs">
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Главная</span></a></div>
+                    <div class="breadcrumbs__item"><span>Корзина</span></div>
+                </nav>
+            </div>
+            <section class="section cart">
+                <div class="container">
+                    <h1 class="title">Корзина (4)</h1>
+                    <form action="" class="cart-form">
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card6.webp" type="image/webp">
+                                            <img src="img/img-card6.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div>
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price">12,847₽ / м<sup>2</sup></div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="60.80">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit1" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit1">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit1">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card5.webp" type="image/webp">
+                                            <img src="img/img-card5.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div> 
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price item-cart__price--red">12,847₽ / м<sup>2</sup>
+                                    <span>12,847₽ / м<sup>2</sup></span>
+                                </div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="1">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit2" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit2">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit2">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card7.webp" type="image/webp">
+                                            <img src="img/img-card7.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div> 
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price">12,847₽ / м<sup>2</sup></div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="1">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit3" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit3">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit3">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-cart">
+                            <div class="item-cart__top">
+                                <div class="item-cart__det">
+                                    <a href="#" class="item-cart__img">
+                                        <picture>
+                                            <source srcset="img/webp/img-card5.webp" type="image/webp">
+                                            <img src="img/img-card5.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="item-cart__info">
+                                        <a href="#" class="h5">CHRONOS 40x30</a>
+                                        <p>Настенная плитка для ванных комнат</p>
+                                        <div class="item-cart__info__items">
+                                            <div class="item-cart__info__item">Коллекция<span>Ocean</span></div>    
+                                            <div class="item-cart__info__item">Цвет<span>Желтый</span></div>
+                                            <div class="item-cart__info__item">Размер<span>40х30</span></div>
+                                            <div class="item-cart__info__item">Тип<span>Матовый</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-cart__code"><span>Арт</span>846327</div>
+                                <div class="item-cart__price item-cart__price--red">12,847₽ / м<sup>2</sup>
+                                    <span>12,847₽ / м<sup>2</sup></span>
+                                </div>
+                                <div class="item-cart__quantity">
+                                    <div class="quantity">
+                                        <button class="quantity__btn js-minus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <input type="number" name="#" value="1">
+                                        <button class="quantity__btn js-plus" type="button">
+                                            <svg>
+                                                <use href="img/icons/sprite.svg#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="item-cart__radio">
+                                        <label>
+                                            <input type="radio" name="unit4" checked>
+                                            <span>М²</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit4">
+                                            <span>ШТ</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="unit4">
+                                            <span>УПАК</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-cart__totalprice">45,000 ₽</div>
+                            </div>
+                            <div class="item-cart__bottom">
+                                <a href="#" class="item-cart__del">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#del-item"></use>
+                                    </svg>
+                                    Удалить
+                                </a>
+                                <div class="item-cart__checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" checked>
+                                        <span>Добавить 10% на подрезку</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="cart__bottom">
+                        <div class="cart-promo">  
+                            <div class="cart-promo__header">
+                                <h3>Промокод</h3>
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </div>
+                            <div class="cart-promo__content">
+                                <form action="" class="promocode">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Например 95A86Gf">
+                                    </div>
+                                    <button class="btn promocode__btn" type="submit">
+                                        <span>Применить</span>
+                                        <svg>
+                                            <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="cart-sum">
+                            <h3 class="cart-sum__finalprice">Итого:<span>1,154,000 ₽</span></h3>
+                            <div class="cart-sum__totalprice">Сумма без скидки:<span>1,304,450 ₽</span></div>
+                            <div class="cart-sum__discount">Скидка:<span>45,000 ₽</span></div>
+                            <a href="#" class="btn btn-dark cart-sum__btn">
+                                <span>Оформить заказ</span>
+                                <svg>
+                                    <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include("_footer.html")
+    </div>
+    @@include("_fixed-el.html")
+</body>
+
+</html>

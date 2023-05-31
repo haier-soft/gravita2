@@ -1,0 +1,15 @@
+.filter-price input {
+  height: auto;
+}
+
+.collection .slick-slide {
+  width: 124px;
+}
+
+.gallery__thumbs .item {
+  width: 100%;
+}
+
+.catalog__footer {
+  margin-top: 40px;
+}
