@@ -2,6 +2,12 @@ body {
   color: #2d2a26;
 }
 
+.bottom__text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .breadcrumbs__link.backward:after {
   display: none;
 }
@@ -1427,12 +1433,13 @@ h6,
   display: none;
 }
 
-.project-products .card__img {
+.project-products .card__top {
   padding-top: 147%;
   position: relative;
+  overflow: hidden;
 }
 
-.project-products .card__img img {
+.project-products .card__img {
   position: absolute;
   width: 100%;
   bottom: 0;

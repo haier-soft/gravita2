@@ -152,15 +152,17 @@
     .counter {
         display: none;
     }
-    .card__img {
+    .card__top {
         padding-top: 147%;
         position: relative;
-        img {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            height: auto;
-        }
+        overflow: hidden;
+    }
+    .card__img {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: auto;
+        
     }
 }
 .designer-block {

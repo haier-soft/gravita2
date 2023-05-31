@@ -1,6 +1,9 @@
 body {
     color: #2d2a26;
 }
+.bottom__text {
+    display: inline-flex;
+}
 .breadcrumbs__link.backward {
     &:after {
         display: none;

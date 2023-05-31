@@ -90,7 +90,7 @@ document.querySelectorAll(".file-form").forEach(item => {
     })
 })
 // show/unshow custom input placeholder
-/* if (document.querySelector(".form-group")) {
+if (document.querySelector(".form-group")) {
     document.querySelectorAll(".form-group").forEach(item => {
         let inp = item.querySelector("input")
         if (inp && item.querySelector(".form-group__placeholder")) {
@@ -98,14 +98,13 @@ document.querySelectorAll(".file-form").forEach(item => {
                 item.querySelector(".form-group__placeholder").style.display="none"                
             })
             inp.addEventListener("blur", ()=> {
-                console.log($(inp))
                 if (inp.value.length === 0) {
                     item.querySelector(".form-group__placeholder").style.display="flex" 
                 }                           
             })
         }
     })
-} */
+}
 //active tab position
 const tabs =  document.querySelectorAll(".tabs-scroll")
 tabs.forEach(item => {
@@ -587,3 +586,5 @@ if ($(".order").length > 0) {
         $('#js-modal-order').fadeIn()
     })
 }
+
+
