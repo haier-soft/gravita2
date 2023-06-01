@@ -5717,10 +5717,6 @@ h6,
     max-width: none;
   }
 
-  .item-cert p {
-    max-width: 237px;
-  }
-
   .notfound__text {
     padding-top: 30px;
     -webkit-box-orient: vertical;
@@ -6232,6 +6228,17 @@ h6,
   }
 }
 
+@media screen and (max-width: 576px) {
+  .js-certificates .carousel {
+    grid-template-columns: 1fr;
+    margin: 0 -5px 40px;
+  }
+
+  .item-cert p {
+    max-width: 334px;
+  }
+}
+
 @media (max-width: 576px) {
   .store-ceo .container {
     max-width: 302px;
@@ -6300,9 +6307,8 @@ h6,
     display: none;
   }
 
-  .js-certificates .carousel {
-    grid-template-columns: 1fr;
-    margin: 0 -5px 40px;
+  .item-cert p {
+    max-width: 237px;
   }
 
   .item-cart__img {

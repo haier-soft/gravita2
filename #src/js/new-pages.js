@@ -277,7 +277,7 @@ if ($('.js-certificates').length > 0) {
     let init = false
     let slickCert
     function slickCertInit() {
-        if (window.innerWidth <= 480) {
+        if (window.innerWidth <= 576) {
             if (!init) {
                 init = true
                 slickCert = $(".js-certificates .carousel").slick({
@@ -293,6 +293,7 @@ if ($('.js-certificates').length > 0) {
                 });
                 $(".js-certificates .counter").css("display", "flex");
                 let currentSlideCert = slickCert.slick("slickCurrentSlide") + 1;
+                console.log(slickCert.slick("getSlick"))
                 let totalSlidesCert = slickCert.slick("getSlick").slideCount;
 
                 $(".js-certificates .counter__current").text(currentSlideCert);
@@ -564,34 +565,6 @@ $(".f-select__radio input").on("change", function () {
     $(this)
       .parents(".f-select")
       .find(".f-select__selected").text(textRad);     
-})
-$(".f-select__checbox input").on("click", function () {
-    let thisInput = $(this).siblings("input");
-    let idInput = thisInput.attr("id");
-    let text = $(this).text();
-
-    setTimeout(function () {
-      //if (thisInput[0].checked === true) {
-      if($(thisInput).is(':checked')){
-
-        /*$(".filter__selected").each(function () {
-          if ($(this).attr("data-target") === idInput) {
-            $(this).remove();
-          }
-        });*/
-        $(".filter__row").append(`
-        <div class="filter__selected" data-target="${idInput}">
-          <span>${text}</span>
-          <svg>
-            <use href="/local/accets/img/icons/sprite.svg#icon-close"></use>
-          </svg>
-        </div>
-      `);
-
-      } else {
-        $('.filter__selected[data-target="'+idInput+'"]').remove();
-      }
-    }, 400);
 })
 $(".cart-promo__header").on("click", function () {
     $(this)
