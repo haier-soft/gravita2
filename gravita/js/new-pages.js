@@ -8,7 +8,8 @@ function formOnSuccess(form) {
     $(form).find('.file-form__item').each(function() {
       $(this).remove()
     })
-    $("#js-modal-thanks").fadeIn();
+    $("#js-modal-thanks").fadeIn(500);
+    $("body").addClass("noscroll");
 }
 // Для демонстрации, удалить
 if (document.querySelector(".item-review")) {
@@ -94,14 +95,24 @@ if (document.querySelector(".form-group")) {
     document.querySelectorAll(".form-group").forEach(item => {
         let inp = item.querySelector("input")
         if (inp && item.querySelector(".form-group__placeholder")) {
-            inp.addEventListener("focus", ()=> {
-                item.querySelector(".form-group__placeholder").style.display="none"                
-            })
-            inp.addEventListener("blur", ()=> {
-                if (inp.value.length === 0) {
-                    item.querySelector(".form-group__placeholder").style.display="flex" 
-                }                           
-            })
+            if (!inp.classList.contains("phone")) {
+                inp.addEventListener("input", () => {
+                    if (inp.value.length === 0) {
+                        item.querySelector(".form-group__placeholder").style.display="flex" 
+                    } else {
+                        item.querySelector(".form-group__placeholder").style.display="none" 
+                    }
+                })
+            } else {
+                inp.addEventListener("focus", ()=> {
+                    item.querySelector(".form-group__placeholder").style.display="none"                
+                })
+                inp.addEventListener("blur", ()=> {
+                    if ( !inp.classList.contains("completed")) {
+                        item.querySelector(".form-group__placeholder").style.display="flex" 
+                    }                           
+                })
+            }
         }
     })
 }
@@ -583,7 +594,8 @@ $('.item-cart__del').on("click", function (e) {
 if ($(".order").length > 0) {
     $(".breadcrumbs__link.backward").on("click", function(e) {
         e.preventDefault();
-        $('#js-modal-order').fadeIn()
+        $('#js-modal-order').fadeIn(500)
+        $("body").addClass("noscroll");
     })
 }
 

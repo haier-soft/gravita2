@@ -49,7 +49,7 @@
         height: 55px;
         justify-content: center;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         &__title {
             margin-bottom: 15px;
         }
@@ -60,7 +60,7 @@
             margin: 0 0 20px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         &__buttons {
             display: block;
         }  
@@ -77,7 +77,7 @@
             left: 20px;
         }       
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         &__buttons {
             display: flex;
         }       
@@ -86,7 +86,7 @@
             margin-bottom: 0;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__buttons {
             display: block;
         }

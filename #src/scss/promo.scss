@@ -95,7 +95,7 @@
         }
     }  
 }
-@media (max-width: 1599px) {
+@media screen and (max-width: 1599px) {
     .item-promo__header {
         h4 {
             bottom: 26px;
@@ -123,7 +123,7 @@
         }
     }  
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .item-promo {
         &__header {
             margin-bottom: 20px;
@@ -149,7 +149,7 @@
         } 
     }    
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .item-promo__header h4 {
         bottom: 20px;
     }

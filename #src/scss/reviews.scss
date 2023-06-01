@@ -10,12 +10,12 @@
     .catalog__footer {
         margin-top: 80px;
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         .catalog__footer {
             margin-top: 60px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         .title {
             margin-bottom: 40px;
         }
@@ -58,12 +58,12 @@
             font-size: 20px;
         }
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         h5 {
             min-height: 58px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         &__preview {
             margin-bottom: 20px;
         }
@@ -71,12 +71,12 @@
             margin-bottom: 20px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         h5 {
             min-height: 0;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__body h5 {
             font-size: 24px;
         }
@@ -86,7 +86,7 @@
     .catalog__footer {
         margin-top: 80px;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         .catalog__footer {
             margin-top: 60px;
         }
@@ -218,7 +218,7 @@
             z-index: 2;
         }
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         &__right {
             margin-left: 20px;
             padding-top: 35px;
@@ -227,7 +227,7 @@
             grid-template-columns: repeat(3,185px);
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         padding: 20px 0;
         &__user-pic {
             width: 80px;
@@ -249,7 +249,7 @@
             grid-template-columns: repeat(3,142px);
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         h5 {
             font-size: 22px;
         }
@@ -272,12 +272,12 @@
             margin-top: 40px;
         }
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         &__left {
             flex: 0 0 143px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         display: block;
         h5 {
             font-size: 20px;

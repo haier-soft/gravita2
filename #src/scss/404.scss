@@ -56,7 +56,7 @@
         height: 55px;
         margin: 40px auto 0;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         padding-bottom: 120px;
         &__img img {
             max-height: 94%;
@@ -71,13 +71,13 @@
             }
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         &__text {
             padding-top: 215px;
             margin-bottom: 60px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         padding-bottom: 80px;
         &__text {
             padding-top: 144px;
@@ -97,7 +97,7 @@
             margin: 0 auto;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__text {
             padding-top: 30px;
             flex-direction: column;

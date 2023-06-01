@@ -23,7 +23,7 @@
     .about-info p {
         margin-bottom: 24px;
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         &__content {
             h5 {
                 max-width: 250px;
@@ -31,7 +31,7 @@
             }
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         .title {
             margin-bottom: 40px;
         }
@@ -44,7 +44,7 @@
             margin-bottom: 22px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__content h5 {
             font-size: 18px;
             max-width: 238px;
@@ -95,11 +95,11 @@
                 object-fit: cover;
                 display: block;
             }
-            @media (max-width: 1859px) {
+            @media screen and (max-width: 1859px) {
                 width: 120px;
                 height: 90px;
             }
-            @media (max-width: 1599px) {
+            @media screen and (max-width: 1599px) {
                 width: 90px;
                 height: 67px;
             }
@@ -150,7 +150,7 @@
         max-width: 494px;
         line-height: 113%;
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         &__pos {
             font-size: 16px;
          }
@@ -158,7 +158,7 @@
            font-size: 14px;
         }
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         &__preview {
             grid-area: 1/1/2/6;
         }
@@ -166,7 +166,7 @@
             grid-area: 1/6/2/16;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         text-align: center;
         .container {
             display: block;
@@ -196,7 +196,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .store-catalog .catalog-toggle a span {
         font-size: 14px;
     }

@@ -11,10 +11,10 @@
         .h3.active {
             font-size: 76px;
             color: #2D2A26;
-            @media (max-width: 991px) {
+            @media screen and (max-width: 991px) {
                 font-size: 56px;
             }
-            @media (max-width: 767px) {
+            @media screen and (max-width: 767px) {
                 font-size: 40px;
             }
         }
@@ -28,17 +28,17 @@
     .tabs__item {
         flex: 0 0 200px;
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         &__header {
          margin-bottom: 80px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         &__inner {
             grid-template-columns: 1fr 1fr;
         }
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         &__inner {
             grid-template-columns: 1fr;
             margin-bottom: 60px;
@@ -109,14 +109,14 @@
             color: rgba(45, 42, 38, 0.2);
         }
 	}
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         .page-labels {
             bottom: 20px;
             left: 20px;
             right: 20px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         h5 {
             font-size: 24px;
         }

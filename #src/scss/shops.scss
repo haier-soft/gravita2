@@ -4,7 +4,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 30px;
-        @media (max-width: 1279px) {
+        @media screen and (max-width: 1279px) {
             display: block;
         }
     }
@@ -12,12 +12,12 @@
         margin-bottom: 0;
         padding-bottom: 0;
         flex-wrap: nowrap;
-        @media (max-width: 1279px) {
+        @media screen and (max-width: 1279px) {
             margin-bottom: 30px;
         }
     }
     .tabs__item {
-        @media (max-width: 767px) {
+        @media screen and (max-width: 767px) {
             font-size: 14px;
             flex: 0 0 50%;
         }
@@ -31,11 +31,11 @@
         left: 30px;
         z-index: 1;
         display: flex;
-        @media (max-width: 1599px) {
+        @media screen and (max-width: 1599px) {
             top: 20px;
             left: 20px;
         }
-        @media (max-width: 767px) {
+        @media screen and (max-width: 767px) {
             flex-direction: column;
             top: 10px;
             left: 10px;
@@ -82,7 +82,7 @@
                 display: block;
             }
         }
-        @media (max-width: 767px) {
+        @media screen and (max-width: 767px) {
             margin-bottom: 10px;
             font-size: 14px;
             min-height: 20px;
@@ -102,7 +102,7 @@
     }
     &__wrapper {
         height: 787px;
-        @media (max-width: 1859px) {
+        @media screen and (max-width: 1859px) {
             height: 650px;
         }
     }
@@ -168,10 +168,10 @@
     [class*="search__suggest-item_selected_yes"] {
         background: #fff;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         width: 493px;
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         width: 468px;
         .form-group {
             input, input::placeholder {
@@ -179,13 +179,13 @@
             }
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         width: 100%;
         [class*="search__suggest-item"] {
             font: 14px/110% "Inter",sans-serif;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         .form-group {
             input, input::placeholder {
                 font-size: 14px;
@@ -232,7 +232,7 @@
     line-height: 100%;
     letter-spacing: -0.04em;
     color: rgba(45, 42, 38, 0.8);
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         font-size: 18px;
     }
     @media (max-width: 479px) {
@@ -249,7 +249,7 @@
     line-height: 100%;
     letter-spacing: -0.04em;
     color: #E77827;
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         font-size: 15px;
     }
     @media (max-width: 479px) {
@@ -289,12 +289,12 @@
         width: 4px;
         background-color: transparent;
     } 
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         &__items {
             padding-right: 89px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         padding: 84px 10px 58px 20px;
         h4 {
             font-size: 32px;
@@ -303,7 +303,7 @@
             padding-right: 68px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         padding: 84px 10px 58px 20px;
         h4 {
             font-size: 24px;
@@ -312,7 +312,7 @@
             padding-right: 27px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         padding: 84px 8px 38px 10px;
         h4 {
             padding-bottom: 20px;
@@ -392,7 +392,7 @@
             }        
         }
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         grid-template-columns: auto 422px 207px 165px;
         gap: 110px;
         &__name {
@@ -416,7 +416,7 @@
             font-size: 16px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         padding: 19px;
         grid-template-columns: auto 365px 207px 145px;
         gap: 57px;
@@ -433,7 +433,7 @@
             font-size: 14px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         grid-template-columns: auto 290px;
         align-items: start;
         gap: 20px;
@@ -442,7 +442,7 @@
             align-self: end;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         grid-template-columns: 1fr;
         gap: 15px;
         &__link {

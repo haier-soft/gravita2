@@ -3,7 +3,7 @@
         max-width: 75%;
         border-bottom: 0;
         margin-bottom: 0;
-        @media (max-width: 1279px) {
+        @media screen and (max-width: 1279px) {
             max-width: none;
             border-bottom: 1px solid rgba(45, 42, 38, 0.2);
             margin-bottom: 20px;
@@ -16,10 +16,10 @@
         justify-content: space-between;
         border-bottom: 1px solid rgba(45, 42, 38, 0.2);
         margin-bottom: 40px;
-        @media (max-width: 1859px) {
+        @media screen and (max-width: 1859px) {
             margin-bottom: 60px;
         }
-        @media (max-width: 1279px) {
+        @media screen and (max-width: 1279px) {
             display: block;
             border-bottom: none;
             margin-bottom: 20px;
@@ -61,7 +61,7 @@
               }
            }
         }
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             padding-bottom: 10px;
             flex-wrap: wrap;
             a {
@@ -76,13 +76,13 @@
         grid-template-columns: repeat(15, 1fr);
         grid-template-rows: repeat(4, auto);
         gap: 20px;
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             display: block;
         }
     } 
     &__preview {
         grid-area: 1/8/2/16;
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             margin-bottom: 40px;
         }
     }
@@ -91,7 +91,7 @@
         ul {
             max-width: 594px;
         }
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             margin-bottom: 40px;
             ul {
                 max-width: none;
@@ -103,7 +103,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             margin-bottom: 20px;
         }
         @media (max-width: 500px) {
@@ -117,7 +117,7 @@
             text-align: right;
             margin: 10px 0 0 auto;
         }
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             p {
                 font-size: 12px
             }
@@ -138,7 +138,7 @@
     }
 }
 .news-slider {
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         .tabs__item {
             flex: 0 0 50%;
         }

@@ -11,12 +11,12 @@
             margin-bottom: 60px;
         }
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         .title {
             margin-bottom: 40px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         p {
             font-size: 20px;
         }
@@ -26,7 +26,7 @@
     width: 360px;
     height: 55px;
     margin: 60px auto 0;
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         margin-top: 40px;
     }
 }
@@ -34,7 +34,7 @@
     .title {
         margin-bottom: 60px;
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         .title {
             margin-bottom: 40px;
         }
@@ -45,12 +45,12 @@
     grid-template-columns: repeat(15,1fr);
     gap: 20px;
     margin-top: 65px;
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         display: block;
         max-width: 688px;
         margin-top: 60px;
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         margin-top: 52px;
     }
 }
@@ -77,21 +77,21 @@
         width: 100%;
         height: 56px;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         .form-group {
             margin-bottom: 40px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         grid-column: 1/6;
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         grid-column: 1/6;
         .btn {
             max-width: 452px;
         }
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         margin-bottom: 20px;
         &__header {
             svg {
@@ -106,7 +106,7 @@
             padding-bottom: 40px;
         }      
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__header {
             svg {
                 width: 24px;
@@ -151,12 +151,12 @@
         width: 100%;
         height: 55px;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         &__discount {
             margin-bottom: 49px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         &__totalprice {
             margin-bottom: 8px;
         }
@@ -164,10 +164,10 @@
             margin-bottom: 60px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         grid-column: 9/16;
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__discount,&__totalprice {
             font-size: 16px;
         }
@@ -394,7 +394,7 @@
             opacity: 1;
         }
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         .h5 {
             font-size: 20px;
         }
@@ -460,7 +460,7 @@
         }
 
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         p {
             font-size: 14px;
         }
@@ -508,7 +508,7 @@
             }
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         padding: 24px 0;
         .h5 {
             font-size: 18px;
@@ -557,7 +557,7 @@
             opacity: 1;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         padding: 24px 0;
         &__top {
             grid-template-columns: auto auto;
@@ -585,7 +585,7 @@
             grid-column: 1/3;
         }
     }
-    @media (max-width: 480px) {
+    @media screen and (max-width: 480px) {
         &__img {
             flex: 0 0 110px;
             width: 110px;

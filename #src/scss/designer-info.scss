@@ -21,12 +21,12 @@
         width: 100%;
         height: 55px;
     }
-    @media (max-width: 1859px) {
+    @media screen and (max-width: 1859px) {
         p {
             font-size: 16px;
         }
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         p {
             font-size: 14px;
         }
@@ -35,7 +35,7 @@
             max-width: 305px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         &__preview {
            grid-area: 1/1/3/9;
         }
@@ -46,7 +46,7 @@
             grid-area: 2/9/3/14;
         }
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         h3 {
             margin-bottom: 30px;
         }
@@ -58,7 +58,7 @@
             margin-bottom: 40px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         &__preview {
             margin-bottom: 30px;
         }  
@@ -87,24 +87,24 @@
     .counter {
         display: none;
     }
-    @media (max-width: 1599px) {
+    @media screen and (max-width: 1599px) {
         p {
             font-size: 14px;
         }
     }
-    @media (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         .carousel {
            grid-template-columns: repeat(3,1fr); 
         }       
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         .carousel {
            grid-template-columns: repeat(2,1fr); 
         }       
     }
-    @media (max-width: 480px) {
+    @media screen and (max-width: 480px) {
         .carousel {
-           display: block;
+           grid-template-columns: 1fr;
            margin: 0 -5px 40px;
         }       
     }
@@ -135,12 +135,12 @@
         color: rgba(45, 42, 38, 0.6);
         margin: 0;
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         &__preview {
             margin-bottom: 20px;
         }
     }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         p {
             max-width: 237px;
         }

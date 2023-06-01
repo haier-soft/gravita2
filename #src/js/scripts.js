@@ -22,7 +22,7 @@ function resetBtnHidden() {
 }
 $(function () {
   var screenWidth = screen.width;
-  var windowWidth = $(window).width();
+  var windowWidth = window.innerWidth
 
   // -------------------------------------------
 
@@ -259,14 +259,18 @@ $(function () {
 
   $(".js-modal-close").on("click", function (e) {
     e.preventDefault();
-    $(".js-modal").fadeOut(100);
-    $("body").removeClass("noscroll");
+    $(".js-modal").fadeOut(100);  
+    setTimeout(() => {
+      $("body").removeClass("noscroll");
+    }, 100);
   });
 
   $("body").on("click", ".js-modal", function (e) {
     if (e.target.classList.contains("js-modal")) {
       $(".js-modal").fadeOut(100);
-      $("body").removeClass("noscroll");
+      setTimeout(() => {
+        $("body").removeClass("noscroll");
+      }, 100);
     }
     e.stopPropagation();
   });
@@ -284,7 +288,7 @@ $(function () {
    *   Маска телефона
    */
 
-  $(".phone").mask("+7 (999) 999-99-99", {autoclear: false });
+  $(".phone").mask("+7 (999) 999-99-99", {completed: function(){$(this).addClass("completed")}});
 
   /*
    *  Tabs
@@ -695,7 +699,6 @@ $(function () {
   let gutterMasonryColl = 0;
   let colMasonryWidth = 0;
   let carditemGutter = 0
-
   if (windowWidth > 1859) {
     gutterMasonry = 144;
     gutterMasonryColl = 144;
@@ -730,7 +733,7 @@ $(function () {
   }
 
   $(window).on("resize", function () {
-    windowWidth = $(window).width();
+    windowWidth = window.innerWidth
     if (windowWidth > 1859) {
       gutterMasonry = 144;
       gutterMasonryColl = 144;
