@@ -8,18 +8,24 @@ body {
   display: inline-flex;
 }
 
+.js-similar-size .carousel .slick-track,
+.js-similar-style .carousel .slick-track,
 .js-viewed-products .carousel .slick-track {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
+.js-similar-size .card__top,
+.js-similar-style .card__top,
 .js-viewed-products .card__top {
   padding-top: 147%;
   position: relative;
   overflow: hidden;
 }
 
+.js-similar-size .card__img,
+.js-similar-style .card__img,
 .js-viewed-products .card__img {
   position: absolute;
   width: 100%;
@@ -5172,6 +5178,19 @@ h6,
     margin: 0 0 24px;
   }
 
+  .form .f-select__list {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .form .f-select__checkbox label {
+    font-size: 14px;
+  }
+
+  .form .f-select__radio label {
+    font-size: 14px;
+  }
+
   .f-select__radio label {
     font-size: 12px;
   }
@@ -5544,6 +5563,12 @@ h6,
     right: 30px;
   }
 
+  .form {
+    /*    .f-select__list {
+           margin-bottom: 10px;
+       } */
+  }
+
   .form .form-group input,
   .form .form-group textarea,
   .form .form-group__placeholder,
@@ -5551,8 +5576,12 @@ h6,
     font-size: 14px;
   }
 
-  .form .f-select__list {
-    margin-bottom: 10px;
+  .form .f-select__checkbox label {
+    font-size: 12px;
+  }
+
+  .form .f-select__radio label {
+    font-size: 12px;
   }
 
   .file-form label {

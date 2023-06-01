@@ -135,6 +135,16 @@
         &__btn {
             margin: 0 0 24px;
         }
+        .f-select__list {
+            position: static;
+            margin-bottom: 10px;
+        }
+        .f-select__checkbox label {
+            font-size: 14px;
+        }
+        .f-select__radio label {
+            font-size: 14px;
+        }
     }
     @media screen and (max-width: 767px) {
         .form-group input,
@@ -143,9 +153,15 @@
         .f-select__header span{
             font-size: 14px;
         }
-        .f-select__list {
-            margin-bottom: 10px;
+        .f-select__checkbox label {
+            font-size: 12px;
         }
+        .f-select__radio label {
+            font-size: 12px;
+        }
+     /*    .f-select__list {
+            margin-bottom: 10px;
+        } */
     }
     @media (max-width: 575px) {
         .f-select__header {
