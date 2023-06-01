@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
      gap: 30px 40px;
-     align-items: flex-start;
+     align-items: start;
     &__footer {
         grid-column: 1/2;
     }
@@ -159,9 +159,6 @@
         .f-select__radio label {
             font-size: 12px;
         }
-     /*    .f-select__list {
-            margin-bottom: 10px;
-        } */
     }
     @media (max-width: 575px) {
         .f-select__header {
@@ -284,6 +281,20 @@
             fill: rgba(45, 42, 38, 0.5);          
         }
 	}
+    &__error {
+        display: none;
+    }
+    &.error label {
+        border-color: #b62732;
+    }
+    &.error .file-form__error {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.1;
+        letter-spacing: -.04em;
+        color: #b62732;
+    }
     @media screen and (max-width: 1599px) {
         label {
             background-size: 20px 20px;
@@ -309,6 +320,12 @@
         }
         &__items {
             max-width: none;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &.error .file-form__error {
+            margin-top: 5px;
+            font-size: 12px;
         }
     }
 }

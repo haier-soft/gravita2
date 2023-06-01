@@ -1,13 +1,18 @@
 function formOnSuccess(form) {
-    $(form).find("input:not([type='hidden'])").each(function() {
+    let thisForm = $(form)
+    thisForm.find("input:not([type='hidden'])").each(function() {
         $(this)
           .val("")
           .siblings(".form-group__placeholder").css("display", "flex")
     })
-    $(form).find('textarea').val("")
-    $(form).find('.file-form__item').each(function() {
-      $(this).remove()
+    thisForm.find('textarea').val("")
+    thisForm.find('.form-group').each(function() {
+        $(this).removeClass("error")
     })
+    thisForm.find('.file-form').removeClass("error")
+    thisForm.find('.file-form__item').each(function() {
+        $(this).remove()
+      })
     $("#js-modal-thanks").fadeIn(500);
     $("body").addClass("noscroll");
 }
@@ -559,6 +564,34 @@ $(".f-select__radio input").on("change", function () {
     $(this)
       .parents(".f-select")
       .find(".f-select__selected").text(textRad);     
+})
+$(".f-select__checbox input").on("click", function () {
+    let thisInput = $(this).siblings("input");
+    let idInput = thisInput.attr("id");
+    let text = $(this).text();
+
+    setTimeout(function () {
+      //if (thisInput[0].checked === true) {
+      if($(thisInput).is(':checked')){
+
+        /*$(".filter__selected").each(function () {
+          if ($(this).attr("data-target") === idInput) {
+            $(this).remove();
+          }
+        });*/
+        $(".filter__row").append(`
+        <div class="filter__selected" data-target="${idInput}">
+          <span>${text}</span>
+          <svg>
+            <use href="/local/accets/img/icons/sprite.svg#icon-close"></use>
+          </svg>
+        </div>
+      `);
+
+      } else {
+        $('.filter__selected[data-target="'+idInput+'"]').remove();
+      }
+    }, 400);
 })
 $(".cart-promo__header").on("click", function () {
     $(this)
