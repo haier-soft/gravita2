@@ -1,6 +1,6 @@
 function formOnSuccess(form) {
     let thisForm = $(form)
-    thisForm.find("input:not([type='hidden'])").each(function() {
+    thisForm.find("input[type='text'],input[type='tel']").each(function() {
         $(this)
           .val("")
           .siblings(".form-group__placeholder").css("display", "flex")
@@ -16,10 +16,29 @@ function formOnSuccess(form) {
     $("#js-modal-thanks").fadeIn(500);
     $("body").addClass("noscroll");
 }
+function formReviewSuccess(form) {
+    let thisForm = $(form)
+    thisForm.find("input[type='text'],input[type='tel']").each(function() {
+        $(this)
+          .val("")
+          .siblings(".form-group__placeholder").css("display", "flex")
+    })
+    thisForm.find('textarea').val("")
+    thisForm.find('.form-group').each(function() {
+        $(this).removeClass("error")
+    })
+    thisForm.find('.file-form').removeClass("error")
+    thisForm.find('.file-form__item').each(function() {
+        $(this).remove()
+      })
+    thisForm.find("input[type='radio']:checked").prop('checked', false);
+    $("#js-modal-review").fadeIn(500);
+    $("body").addClass("noscroll");
+}
 // Для демонстрации, удалить
 if (document.querySelector(".item-review")) {
     const review = document.querySelectorAll(".item-review")
-    review[0].querySelector(".item-review__review-container.dark").style.width = "80%"
+    review[0].querySelector(".rating-container.dark").style.width = "80%"
 }
 // Для демонстрации, удалить
 if (document.querySelector(".stock-form")) {

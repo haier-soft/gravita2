@@ -34,14 +34,14 @@ $(function () {
   const defaultOffset = 200;
   const header = $(".header");
   const scrollPosition = () =>
-      window.pageYOffset || document.documentElement.scrollTop;
+    window.pageYOffset || document.documentElement.scrollTop;
   const containHide = () => header.hasClass("hide");
 
   $(window).on("scroll", function () {
     if (
-        scrollPosition() > lastScroll &&
-        !containHide() &&
-        scrollPosition() > defaultOffset
+      scrollPosition() > lastScroll &&
+      !containHide() &&
+      scrollPosition() > defaultOffset
     ) {
       header.addClass("hide");
     } else if (scrollPosition() < lastScroll && containHide()) {
@@ -166,9 +166,9 @@ $(function () {
     btn.removeClass("open");
     $(".search").slideUp();
     if (!$(".menu-toggle").hasClass("open")) {
-        $("body").removeClass("noscroll");
+      $("body").removeClass("noscroll");
     }
-   
+
 
     setTimeout(function () {
       btn.hide();
@@ -262,7 +262,7 @@ $(function () {
 
   $(".js-modal-close").on("click", function (e) {
     e.preventDefault();
-    $(".js-modal").fadeOut(100);  
+    $(".js-modal").fadeOut(100);
     setTimeout(() => {
       $("body").removeClass("noscroll");
     }, 100);
@@ -291,7 +291,7 @@ $(function () {
    *   Маска телефона
    */
 
-  $(".phone").mask("+7 (999) 999-99-99", {completed: function(){$(this).addClass("completed")}});
+  $(".phone").mask("+7 (999) 999-99-99", { completed: function () { $(this).addClass("completed") } });
 
   /*
    *  Tabs
@@ -316,15 +316,15 @@ $(function () {
 
   $(".accordion__header").on("click", function () {
     $(this)
-        .toggleClass("open")
-        .siblings(".accordion__content")
-        .slideToggle()
-        .parents(".accordion__item")
-        .siblings(".accordion__item")
-        .find(".accordion__header")
-        .removeClass("open")
-        .siblings(".accordion__content")
-        .slideUp();
+      .toggleClass("open")
+      .siblings(".accordion__content")
+      .slideToggle()
+      .parents(".accordion__item")
+      .siblings(".accordion__item")
+      .find(".accordion__header")
+      .removeClass("open")
+      .siblings(".accordion__content")
+      .slideUp();
   });
 
   /*
@@ -351,8 +351,8 @@ $(function () {
   $(".tooltip__icon").on("click", function (e) {
     $(this).siblings(".tooltip__popup").fadeToggle();
     if (
-        windowWidth - $(this).siblings(".tooltip__popup").offset().left - 260 <
-        150
+      windowWidth - $(this).siblings(".tooltip__popup").offset().left - 260 <
+      150
     ) {
       $(this).siblings(".tooltip__popup").css({ left: "auto", right: 0 });
     }
@@ -397,12 +397,12 @@ $(function () {
     e.preventDefault();
     let textSort = $(this).text();
     $(this)
-        .parents(".sort__dropdown")
-        .slideUp()
-        .siblings(".sort__toggle")
-        .removeClass("open")
-        .find(".sort__selected")
-        .text(textSort);
+      .parents(".sort__dropdown")
+      .slideUp()
+      .siblings(".sort__toggle")
+      .removeClass("open")
+      .find(".sort__selected")
+      .text(textSort);
   });
 
   /*
@@ -411,12 +411,12 @@ $(function () {
 
   $(".f-select__header").on("click", function () {
     $(this)
-        .parents(".f-select")
-        .siblings(".f-select")
-        .find(".f-select__header")
-        .removeClass("open")
-        .siblings(".f-select__list")
-        .slideUp();
+      .parents(".f-select")
+      .siblings(".f-select")
+      .find(".f-select__header")
+      .removeClass("open")
+      .siblings(".f-select__list")
+      .slideUp();
     $(this).toggleClass("open").siblings(".f-select__list").slideToggle();
   });
 
@@ -424,9 +424,9 @@ $(function () {
     if ($(this).hasClass("open")) {
       $(this).removeClass("open").find("span").text("Показать все");
       $(this)
-          .siblings(".f-select__wrap")
-          .find(".f-select__checkbox:not(.hit)")
-          .hide();
+        .siblings(".f-select__wrap")
+        .find(".f-select__checkbox:not(.hit)")
+        .hide();
       $(this).siblings(".f-select__title").text("Популярные:");
     } else {
       $(this).addClass("open").find("span").text("Скрыть все");
@@ -437,8 +437,8 @@ $(function () {
 
   $("body").on("mousedown", function (e) {
     if (
-        !e.target.classList.contains("f-select") &&
-        !e.target.closest(".f-select")
+      !e.target.classList.contains("f-select") &&
+      !e.target.closest(".f-select")
     ) {
       $(".f-select__list").slideUp();
     }
@@ -478,65 +478,99 @@ $(function () {
    * Catalog collections
    */
 
-/*   const collections = $(".colls-item");
+  const collections = $(".colls-item");
 
-  if (screenWidth > 991) {
+  /*  if (screenWidth > 991) {
+     $(window).on("scroll", function () {
+       let offsetTop = $(window).scrollTop();
+       collections.each(function () {
+         let item = $(this);
+         let itemOffsetTop = item.offset().top - 78;
+         let itemWrapHeight = item.find(".colls-item__wrap").height();
+         let itemHeight = item.height() - itemWrapHeight;
+         let itemOffsetBottom = item.offset().top + itemHeight - 118;
+         let itemGoodsHeight = item.find(".coll-goods").height();
+         console.log(itemWrapHeight, itemGoodsHeight);
+         if (itemWrapHeight < itemGoodsHeight) {
+           if (
+               offsetTop > itemOffsetTop &&
+               offsetTop < itemOffsetBottom &&
+               !item.hasClass("fixed")
+           ) {
+             item.removeClass("absolute").addClass("fixed");
+           } else if (
+               offsetTop > itemOffsetBottom &&
+               !item.hasClass("absolute")
+           ) {
+             item.removeClass("fixed").addClass("absolute");
+           } else if (offsetTop < itemOffsetTop) {
+             item.removeClass("fixed");
+           }
+         }
+       });
+     });
+   } else {
+     $(window).on("scroll", function () {
+       let offsetTop = $(window).scrollTop();
+       collections.each(function () {
+         let item = $(this);
+         let itemOffsetTop = item.offset().top;
+         let itemOffsetBottom = item.offset().top + item.height() - 40;
+         let itemTitleHeight = item.find(".colls-item__title").height();
+ 
+         if (offsetTop > itemOffsetTop && offsetTop < itemOffsetBottom) {
+           item
+               .find(".colls-item__title")
+               .removeClass("absolute")
+               .addClass("fixed");
+           item.css("padding-top", itemTitleHeight + "px");
+         } else if (offsetTop < itemOffsetTop) {
+           item.find(".colls-item__title").removeClass("fixed");
+           item.css("padding-top", "0px");
+         } else if (offsetTop > itemOffsetBottom) {
+           item
+               .find(".colls-item__title")
+               .removeClass("fixed")
+               .addClass("absolute");
+         }
+       });
+     });
+   } */
+  function fixedCollTitle() {
     $(window).on("scroll", function () {
-      let offsetTop = $(window).scrollTop();
-      collections.each(function () {
-        let item = $(this);
-        let itemOffsetTop = item.offset().top - 78;
-        let itemWrapHeight = item.find(".colls-item__wrap").height();
-        let itemHeight = item.height() - itemWrapHeight;
-        let itemOffsetBottom = item.offset().top + itemHeight - 118;
-        let itemGoodsHeight = item.find(".coll-goods").height();
-        console.log(itemWrapHeight, itemGoodsHeight);
-        if (itemWrapHeight < itemGoodsHeight) {
-          if (
-              offsetTop > itemOffsetTop &&
-              offsetTop < itemOffsetBottom &&
-              !item.hasClass("fixed")
-          ) {
-            item.removeClass("absolute").addClass("fixed");
-          } else if (
-              offsetTop > itemOffsetBottom &&
-              !item.hasClass("absolute")
-          ) {
-            item.removeClass("fixed").addClass("absolute");
-          } else if (offsetTop < itemOffsetTop) {
-            item.removeClass("fixed");
-          }
-        }
-      });
-    });
-  } else {
-    $(window).on("scroll", function () {
-      let offsetTop = $(window).scrollTop();
-      collections.each(function () {
-        let item = $(this);
-        let itemOffsetTop = item.offset().top;
-        let itemOffsetBottom = item.offset().top + item.height() - 40;
-        let itemTitleHeight = item.find(".colls-item__title").height();
+      if (window.innerWidth <= 991) {
+        let offsetTop = $(window).scrollTop();
+        collections.each(function () {
+          let item = $(this);
+          let itemOffsetTop = item.offset().top;
+          let itemOffsetBottom = item.offset().top + item.height() - 40;
+          let itemTitleHeight = item.find(".colls-item__title").height();
 
-        if (offsetTop > itemOffsetTop && offsetTop < itemOffsetBottom) {
-          item
+          if (offsetTop > itemOffsetTop && offsetTop < itemOffsetBottom) {
+            item
               .find(".colls-item__title")
               .removeClass("absolute")
               .addClass("fixed");
-          item.css("padding-top", itemTitleHeight + "px");
-        } else if (offsetTop < itemOffsetTop) {
-          item.find(".colls-item__title").removeClass("fixed");
-          item.css("padding-top", "0px");
-        } else if (offsetTop > itemOffsetBottom) {
-          item
+            item.css("padding-top", itemTitleHeight + "px");
+          } else if (offsetTop < itemOffsetTop) {
+            item.find(".colls-item__title").removeClass("fixed");
+            item.css("padding-top", "0px");
+          } else if (offsetTop > itemOffsetBottom) {
+            item
               .find(".colls-item__title")
               .removeClass("fixed")
               .addClass("absolute");
-        }
-      });
+          }
+        });
+      } else {
+        collections.each(function () {
+          $(this).find(".colls-item__title").removeClass("absolute").removeClass("fixed");
+        })
+      }
     });
-  } */
-
+  }
+  fixedCollTitle()
+  $(window).on("resize", () => fixedCollTitle())
   /*
    * Product
    */
@@ -548,21 +582,21 @@ $(function () {
       if (window.innerWidth > 991) {
         let productOffsetTop = product.offset().top;
         let productOffsetBottom =
-            productOffsetTop +
-            product.find(".product__row").height() -
-            product.find(".product__wrap").height();
+          productOffsetTop +
+          product.find(".product__row").height() -
+          product.find(".product__wrap").height();
 
         if (
-            offsetTop > productOffsetTop &&
-            offsetTop < productOffsetBottom &&
-            !product.hasClass("fixed")
+          offsetTop > productOffsetTop &&
+          offsetTop < productOffsetBottom &&
+          !product.hasClass("fixed")
         ) {
           product.addClass("fixed").removeClass("absolute");
         } else if (offsetTop < productOffsetTop) {
           product.removeClass("fixed");
         } else if (
-            offsetTop > productOffsetBottom &&
-            !product.hasClass("absolute")
+          offsetTop > productOffsetBottom &&
+          !product.hasClass("absolute")
         ) {
           product.removeClass("fixed").addClass("absolute");
         }
@@ -572,10 +606,10 @@ $(function () {
           delta = 180;
         }
         let productOffsetBottom =
-            product.offset().top +
-            product.find(".product__left").height() -
-            $(window).height()  +
-            delta
+          product.offset().top +
+          product.find(".product__left").height() -
+          $(window).height() +
+          delta
         if (offsetTop > productOffsetBottom) {
           $(".product__right").addClass("static");
         } else {
@@ -591,7 +625,7 @@ $(function () {
     let target = $(this).attr("href");
     let targetOffsetTop = $(target).position().top;
     let productOffsetBottom =
-        product.offset().top + product.find(".product__left").height();
+      product.offset().top + product.find(".product__left").height();
     let destination = productOffsetBottom + targetOffsetTop + 40;
     $("html,body").animate({ scrollTop: destination }, 600);
     return false;
@@ -649,7 +683,7 @@ $(function () {
         let offsetTop = $(window).scrollTop();
         let goodsOffsetTop = goods.offset().top - 84;
         let goodsOffsetBottom =
-            goods.offset().top + goods.height() - goodsNav.height() - 84;
+          goods.offset().top + goods.height() - goodsNav.height() - 84;
 
         if (offsetTop > goodsOffsetTop && offsetTop < goodsOffsetBottom) {
           goodsNav.addClass("fixed");
@@ -660,8 +694,8 @@ $(function () {
         $(".goods-nav__link").each(function () {
           let sectionOffset = $(this.hash).offset().top - 94;
           if (
-              sectionOffset <= offsetTop &&
-              offsetTop < sectionOffset + $(this.hash).height()
+            sectionOffset <= offsetTop &&
+            offsetTop < sectionOffset + $(this.hash).height()
           ) {
             $(this).addClass("active");
           } else {
@@ -674,15 +708,15 @@ $(function () {
       $(".goods-nav__link").on("click", function (e) {
         e.preventDefault();
         $(this)
-            .addClass("active")
-            .siblings(".goods-nav__link")
-            .removeClass("active");
+          .addClass("active")
+          .siblings(".goods-nav__link")
+          .removeClass("active");
         $(this.hash)
-            .fadeIn()
-            .addClass("active")
-            .siblings(".coll-goods")
-            .hide()
-            .removeClass("active");
+          .fadeIn()
+          .addClass("active")
+          .siblings(".coll-goods")
+          .hide()
+          .removeClass("active");
 
         $(".coll-goods").masonry({
           gutter: gutterMasonryColl,
@@ -784,7 +818,7 @@ $(function () {
       itemSelector: ".coll-goods__item",
       lazyLoad: true,
     });
-    $(".card-items").each(function() {
+    $(".card-items").each(function () {
       $cardItems = $(this).masonry({
         horizontalOrder: true,
         gutter: carditemGutter,
@@ -809,7 +843,7 @@ $(function () {
     itemSelector: ".coll-goods__item",
     lazyLoad: true,
   });
-  $(".card-items").each(function() {
+  $(".card-items").each(function () {
     $cardItems = $(this).masonry({
       horizontalOrder: true,
       gutter: carditemGutter,
@@ -825,23 +859,23 @@ $(function () {
   const $range = $(".js-range-price");
   const $inputFrom = $(".js-input-from");
   const $inputTo = $(".js-input-to");
-  if($inputTo.val()>0){
+  if ($inputTo.val() > 0) {
     var rangeMax = $inputTo.val();
-  }else{
+  } else {
     var rangeMax = $inputTo.attr('max');
   }
-  if($inputFrom.val()>0){
+  if ($inputFrom.val() > 0) {
     var rangeMin = $inputFrom.val();
-  }else{
+  } else {
     var rangeMin = $inputFrom.attr('min');
   }
   var minInput = $inputFrom.attr('id');
   var maxInput = $inputTo.attr('id');
   let instance,
-      min = Number($inputFrom.attr('min')),
-      max = Number($inputTo.attr('max')),
-      from = 0,
-      to = 0;
+    min = Number($inputFrom.attr('min')),
+    max = Number($inputTo.attr('max')),
+    from = 0,
+    to = 0;
 
   $range.ionRangeSlider({
     grid: false,
@@ -858,7 +892,7 @@ $(function () {
 
   instance = $range.data("ionRangeSlider");
 
-  function sendForm(data){
+  function sendForm(data) {
     smartFilter.keyup(BX(minInput));
     smartFilter.keyup(BX(maxInput));
   }

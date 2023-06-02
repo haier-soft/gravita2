@@ -269,18 +269,19 @@
                             </div>
                         </div>
                         <div class="item-story">
-                            <a href="media/video-review.mp4" class="video media-cover item-story__preview" data-fancybox="video-reviews">
+                            <a href="media/video-review.mp4" class="video media-cover item-story__preview"
+                                data-fancybox="video-reviews">
                                 <picture>
                                     <source srcset="img/webp/story-2.webp" type="image/webp">
                                     <img src="img/story-2.jpg" alt="">
                                 </picture>
                             </a>
                             <div class="item-story__body">
-                                <a href="#">
+                                <a href="media/video-review.mp4" data-fancybox="video-reviews">
                                     <h5>Это лучшее решение в нашей жизни</h5>
                                 </a>
                                 <p>Саша и Лена из Москвы</p>
-                                <a href="#" class="main-link">
+                                <a href="media/video-review.mp4" class="main-link" data-fancybox="video-reviews">
                                     <span>Смотреть видео</span>
                                     <svg>
                                         <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
@@ -289,18 +290,19 @@
                             </div>
                         </div>
                         <div class="item-story">
-                            <a href="media/video-review.mp4" class="video media-cover item-story__preview" data-fancybox="video-reviews">
+                            <a href="media/video-review.mp4" class="video media-cover item-story__preview"
+                                data-fancybox="video-reviews">
                                 <picture>
                                     <source srcset="img/webp/story-3.webp" type="image/webp">
                                     <img src="img/story-3.jpg" alt="">
                                 </picture>
                             </a>
                             <div class="item-story__body">
-                                <a href="#">
+                                <a href="media/video-review.mp4" data-fancybox="video-reviews">
                                     <h5>уЖЕ 5 ЛЕТ С ПЛИТКОЙ - И КАК НОВАЯ!самая ЛУЧШАЯ ПЛИТКА ДЛЯ КУХНИ</h5>
                                 </a>
                                 <p>Саша и Лена из Москвы</p>
-                                <a href="#" class="main-link">
+                                <a href="media/video-review.mp4" class="main-link" data-fancybox="video-reviews">
                                     <span>Смотреть видео</span>
                                     <svg>
                                         <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
@@ -351,7 +353,7 @@
                             </div>
                             <div class="item-review__right">
                                 <div class="item-review__rating">
-                                    <span class="item-review__review-container light">
+                                    <span class="rating-container light">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -368,7 +370,7 @@
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
                                     </span>
-                                    <span class="item-review__review-container dark">
+                                    <span class="rating-container dark">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -440,7 +442,7 @@
                             </div>
                             <div class="item-review__right">
                                 <div class="item-review__rating">
-                                    <span class="item-review__review-container light">
+                                    <span class="rating-container light">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -457,7 +459,7 @@
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
                                     </span>
-                                    <span class="item-review__review-container dark">
+                                    <span class="rating-container dark">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -499,7 +501,7 @@
                             </div>
                             <div class="item-review__right">
                                 <div class="item-review__rating">
-                                    <span class="item-review__review-container light">
+                                    <span class="rating-container light">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -516,7 +518,7 @@
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
                                     </span>
-                                    <span class="item-review__review-container dark">
+                                    <span class="rating-container dark">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -577,7 +579,7 @@
                             </div>
                             <div class="item-review__right">
                                 <div class="item-review__rating">
-                                    <span class="item-review__review-container light">
+                                    <span class="rating-container light">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -594,7 +596,7 @@
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
                                     </span>
-                                    <span class="item-review__review-container dark">
+                                    <span class="rating-container dark">
                                         <svg>
                                             <use href="img/icons/sprite.svg#star"></use>
                                         </svg>
@@ -635,6 +637,64 @@
                     <div class="catalog__footer">
                         <a class="catalog__more" href="#">Показать еще</a>
                     </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2 class="section__title section__title--sm">Оставьте свой отзыв</h2>
+                <form action="" class="form reviews-form" onsubmit="event.preventDefault(); formReviewSuccess(this)">
+                    <div class="form-group">
+                        <input type="text" name="#">
+                        <div class="form-group__placeholder">Фио<span>*</span></div>
+                    </div>
+                    <div class="rating-form">
+                        <div class="rating-form__lbl">Ваша оценка<span>*</span></div>
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5"><svg>
+                                    <use href="img/icons/sprite.svg#star"></use>
+                                </svg></label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4"><svg>
+                                    <use href="img/icons/sprite.svg#star"></use>
+                                </svg></label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3"><svg>
+                                    <use href="img/icons/sprite.svg#star"></use>
+                                </svg></label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2"><svg>
+                                    <use href="img/icons/sprite.svg#star"></use>
+                                </svg></label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1"><svg>
+                                    <use href="img/icons/sprite.svg#star"></use>
+                                </svg></label>
+                        </div>
+                    </div>
+                    <div class="form-group textarea">
+                        <textarea name="#" placeholder="Сообщение" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                    </div>
+                    <div class="file-form">
+                        <label class="btn">
+                            <input type="file" multiple name="#">
+                            <span>Прикрепить файл</span>
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                            </svg>
+                        </label>
+                        <div class="file-form__items"></div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn btn-dark form__btn" type="submit"><span>оставить отзыв</span>
+                            <svg>
+                                <use href="img/icons/sprite.svg#arrow-bottom-right"></use>
+                            </svg>
+                        </button>
+                        <p class="form__text">*Отправляя заявку, я соглашаюсь с условиями <a href="#">Политики
+                                конфиденциальности</a></p>
+                    </div>
+                </form>
                 </div>
             </section>
         </main>
@@ -950,6 +1010,16 @@
                     </svg>
                 </a>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="js-modal-review">
+    <div class="modal__inner"><a class="modal__close js-modal-close" href="#">
+            <svg>
+                <use href="img/icons/sprite.svg#close"></use>
+            </svg></a>
+        <div class="modal__wrap">
+            <p class="h5">Спасибо за отзыв!</p>
         </div>
     </div>
 </div>

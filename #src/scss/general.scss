@@ -34,6 +34,18 @@ body {
         
     }
 }
+.breadcrumbs__link {
+    @media screen and (max-width: 991px) {
+        &:before, &:after {
+           height: 8px;
+        }      
+    }
+    @media screen and (max-width: 479px) {
+        &:before, &:after {
+            height: 6px;
+         } 
+    }
+}
 .breadcrumbs__link.backward {
     &:after {
         display: none;
