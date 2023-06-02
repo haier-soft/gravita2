@@ -4,6 +4,17 @@ body {
 .bottom__text {
     display: inline-flex;
 }
+.colls-item {
+    align-items: flex-start;
+}
+.colls-item__left {
+    position: sticky;
+    top: 78px;
+    @media screen and (max-width: 991px) {
+        position: static;
+    }
+}
+.js-project-products,
 .js-similar-size, 
 .js-similar-style,
 .js-viewed-products {

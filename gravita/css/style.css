@@ -8,6 +8,18 @@ body {
   display: inline-flex;
 }
 
+.colls-item {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.colls-item__left {
+  position: sticky;
+  top: 78px;
+}
+
+.js-project-products .carousel .slick-track,
 .js-similar-size .carousel .slick-track,
 .js-similar-style .carousel .slick-track,
 .js-viewed-products .carousel .slick-track {
@@ -16,6 +28,7 @@ body {
   align-items: flex-start;
 }
 
+.js-project-products .card__top,
 .js-similar-size .card__top,
 .js-similar-style .card__top,
 .js-viewed-products .card__top {
@@ -24,6 +37,7 @@ body {
   overflow: hidden;
 }
 
+.js-project-products .card__img,
 .js-similar-size .card__img,
 .js-similar-style .card__img,
 .js-viewed-products .card__img {
@@ -1461,26 +1475,10 @@ h6,
 
 .project-products .slick-track {
   margin-left: 0;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
 }
 
 .project-products .counter {
   display: none;
-}
-
-.project-products .card__top {
-  padding-top: 147%;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-products .card__img {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: auto;
 }
 
 .designer-block__inner {
@@ -5096,6 +5094,10 @@ h6,
 }
 
 @media screen and (max-width: 991px) {
+  .colls-item__left {
+    position: static;
+  }
+
   .section {
     margin-bottom: 150px;
   }

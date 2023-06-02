@@ -165,7 +165,10 @@ $(function () {
     const btn = $(this);
     btn.removeClass("open");
     $(".search").slideUp();
-    $("body").removeClass("noscroll");
+    if (!$(".menu-toggle").hasClass("open")) {
+        $("body").removeClass("noscroll");
+    }
+   
 
     setTimeout(function () {
       btn.hide();
@@ -475,7 +478,7 @@ $(function () {
    * Catalog collections
    */
 
-  const collections = $(".colls-item");
+/*   const collections = $(".colls-item");
 
   if (screenWidth > 991) {
     $(window).on("scroll", function () {
@@ -532,7 +535,7 @@ $(function () {
         }
       });
     });
-  }
+  } */
 
   /*
    * Product
