@@ -226,7 +226,7 @@ if ($('.js-project').length > 0) {
                     $(".js-project .counter__current").text(currentSlide + 1);
                 });
             }
-        } else if (init) {
+        } else if (window.innerWidth <= 480 && init) {
             slickProject.slick('unslick');
             init = false
             $(".js-project .counter").css("display", "none");
@@ -332,7 +332,7 @@ if ($('.js-certificates').length > 0) {
                     $(".js-certificates .counter__current").text(currentSlide + 1);
                 });
             }
-        } else if (init) {
+        } else if ( window.innerWidth > 576 && init) {
             slickCert.slick('unslick');
             init = false
             $(".js-certificates .counter").css("display", "none");
@@ -374,7 +374,7 @@ if ($(".js-team").length > 0) {
                         $(team).find(".counter__current").text(currentSlide + 1);
                     });
                 }
-            } else if (init) {
+            } else if (window.innerWidth > 991 && init) {
                 slickTeam.slick('unslick');
                 init = false
                 $(team).find(".counter").css("display", "none");
