@@ -163,7 +163,10 @@ $(function () {
     if ($('.js-promo').length > 0) {
         const slickPromo = $(".js-promo .carousel").slick({
             slidesToShow: 3,
+            slidesToScroll: 1,
             swipeToSlide: true,
+            infinite: true, 
+            dots: false,
             autoplay: true,
             autoplaySpeed: 5000,
             speed: 800,
@@ -206,9 +209,12 @@ $(function () {
                     init = true
                     const slickProject = $(".js-project .carousel").slick({
                         slidesToShow: 1,
+                        slidesToScroll: 1, 
+                        swipeToSlide: true,
                         centerMode: true,
                         centerPadding: '20px',
-                        swipeToSlide: true,
+                        infinite: true,
+                        dots: false,
                         autoplay: true,
                         autoplaySpeed: 5000,
                         speed: 800,
@@ -240,9 +246,13 @@ $(function () {
     if ($('.js-project-products').length > 0) {
         const slickProjectProducts = $(".js-project-products .carousel").slick({
             slidesToShow: 5,
+            slidesToScroll: 1,
             swipeToSlide: true,
             autoplay: true,
             autoplaySpeed: 5000,
+            infinite: true,
+            dots: false,
+            speed: 800,
             responsive: [
                 {
                     breakpoint: 1280,
@@ -263,7 +273,6 @@ $(function () {
                     },
                 }
             ],
-            speed: 800,
             prevArrow:
                 '<button class="prev" type="button"><svg><use href="img/icons/sprite.svg#arrow-left"></svg></button>',
             nextArrow:
@@ -311,10 +320,13 @@ $(function () {
                     init = true
                     const slickCert = $(".js-certificates .carousel").slick({
                         slidesToShow: 1,
-                        swipeToSlide: true,
+                        swipeToSlide: true, 
+                        slidesToScroll: 1,
                         autoplay: true,
                         autoplaySpeed: 5000,
-                        speed: 800,
+                        speed: 800, 
+                        infinite: true,
+                        dots: false,
                         prevArrow:
                             '<button class="prev" type="button"><svg><use href="img/icons/sprite.svg#arrow-left"></svg></button>',
                         nextArrow:
@@ -352,10 +364,13 @@ $(function () {
                         init = true
                         slickTeam = $(team).find(".carousel").slick({
                             slidesToShow: 1,
+                            slidesToScroll: 1,
                             swipeToSlide: true,
                             autoplay: true,
                             autoplaySpeed: 5000,
                             speed: 800,
+                            infinite: true,
+                            dots: false,
                             prevArrow:
                                 '<button class="prev" type="button"><svg><use href="img/icons/sprite.svg#arrow-left"></svg></button>',
                             nextArrow:
