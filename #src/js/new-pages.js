@@ -603,6 +603,17 @@ $(function () {
             $(".js-designers .counter__current").text(currentSlide + 1);
         });
     }
+    $(".f-select--checkbox input").on("change", function () {
+        let selected = $(this).parents(".f-select--checkbox").find(".f-select__selected")
+        if ($(".f-select--checkbox input:checked").length === 1) {
+            let textInp = $(this).siblings("label").text()
+            selected.text(textInp);
+        } else if ($(".f-select--checkbox input:checked").length > 1) {
+            selected.html(`Выбрано<mark>${$(".f-select--checkbox input:checked").length}</mark>`);
+        } else {
+            selected.text("Выберите стиль");
+        }
+    })
     $(".f-select__radio input").on("change", function () {
         let textRad = $(this).siblings("label").text()
         $(this)
@@ -641,7 +652,7 @@ $(function () {
     });
     // order-modal
     if ($(".order").length > 0) {
-        $(".breadcrumbs__link.backward").on("click", function (e) {
+        $(".breadcrumbs__link--tocart").on("click", function (e) {
             e.preventDefault();
             $('#js-modal-order').fadeIn(500)
             $("body").addClass("noscroll");

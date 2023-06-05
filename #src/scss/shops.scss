@@ -123,7 +123,7 @@
             border-bottom: 0;
             @media (max-width: 359px) {
                 &::placeholder {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
             }
         }
@@ -173,23 +173,11 @@
     }
     @media screen and (max-width: 1599px) {
         width: 468px;
-        .form-group {
-            input, input::placeholder {
-                font-size: 16px;
-            }
-        }
     }
     @media screen and (max-width: 1279px) {
         width: 100%;
         [class*="search__suggest-item"] {
             font: 14px/110% "Inter",sans-serif;
-        }
-    }
-    @media screen and (max-width: 767px) {
-        .form-group {
-            input, input::placeholder {
-                font-size: 14px;
-            }
         }
     }
 }

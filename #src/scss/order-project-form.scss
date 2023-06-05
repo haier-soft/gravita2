@@ -64,6 +64,11 @@
         border-bottom: 1px solid rgba(45,42,38,.4);
         margin-bottom: 30px;
         transition: .3s linear;
+        &__selected {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+        }
     }
     .f-select__header {
         min-height: 43px;
@@ -79,6 +84,8 @@
         }
         > span {
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             column-gap: 10px;
         }
     }
