@@ -480,62 +480,7 @@ $(function () {
 
   const collections = $(".colls-item");
 
-  /*  if (screenWidth > 991) {
-     $(window).on("scroll", function () {
-       let offsetTop = $(window).scrollTop();
-       collections.each(function () {
-         let item = $(this);
-         let itemOffsetTop = item.offset().top - 78;
-         let itemWrapHeight = item.find(".colls-item__wrap").height();
-         let itemHeight = item.height() - itemWrapHeight;
-         let itemOffsetBottom = item.offset().top + itemHeight - 118;
-         let itemGoodsHeight = item.find(".coll-goods").height();
-         console.log(itemWrapHeight, itemGoodsHeight);
-         if (itemWrapHeight < itemGoodsHeight) {
-           if (
-               offsetTop > itemOffsetTop &&
-               offsetTop < itemOffsetBottom &&
-               !item.hasClass("fixed")
-           ) {
-             item.removeClass("absolute").addClass("fixed");
-           } else if (
-               offsetTop > itemOffsetBottom &&
-               !item.hasClass("absolute")
-           ) {
-             item.removeClass("fixed").addClass("absolute");
-           } else if (offsetTop < itemOffsetTop) {
-             item.removeClass("fixed");
-           }
-         }
-       });
-     });
-   } else {
-     $(window).on("scroll", function () {
-       let offsetTop = $(window).scrollTop();
-       collections.each(function () {
-         let item = $(this);
-         let itemOffsetTop = item.offset().top;
-         let itemOffsetBottom = item.offset().top + item.height() - 40;
-         let itemTitleHeight = item.find(".colls-item__title").height();
- 
-         if (offsetTop > itemOffsetTop && offsetTop < itemOffsetBottom) {
-           item
-               .find(".colls-item__title")
-               .removeClass("absolute")
-               .addClass("fixed");
-           item.css("padding-top", itemTitleHeight + "px");
-         } else if (offsetTop < itemOffsetTop) {
-           item.find(".colls-item__title").removeClass("fixed");
-           item.css("padding-top", "0px");
-         } else if (offsetTop > itemOffsetBottom) {
-           item
-               .find(".colls-item__title")
-               .removeClass("fixed")
-               .addClass("absolute");
-         }
-       });
-     });
-   } */
+
   function fixedCollTitle() {
     $(window).on("scroll", function () {
       if (window.innerWidth <= 991) {
@@ -550,7 +495,8 @@ $(function () {
             item
               .find(".colls-item__title")
               .removeClass("absolute")
-              .addClass("fixed");
+              .addClass("fixed")
+              .css("width", $(this).width() - 20 + "px");
             item.css("padding-top", itemTitleHeight + "px");
           } else if (offsetTop < itemOffsetTop) {
             item.find(".colls-item__title").removeClass("fixed");

@@ -16,6 +16,7 @@ mark {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  margin-bottom: 100px;
 }
 
 .colls-item__left {
@@ -5206,6 +5207,10 @@ h6,
 }
 
 @media screen and (max-width: 991px) {
+  .colls-item {
+    margin-bottom: 80px;
+  }
+
   .colls-item__left {
     position: static;
   }
@@ -6376,6 +6381,17 @@ h6,
   }
 }
 
+@media screen and (max-width: 575px) {
+  .colls-item {
+    margin-bottom: 60px;
+  }
+
+  .file-form.error .file-form__error {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 575px) {
   .form .f-select__header {
     min-height: 39px;
@@ -6389,13 +6405,6 @@ h6,
     grid-area: 3/1/4/3;
     margin: 0 -10px;
     padding-top: calc(100% + 20px);
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .file-form.error .file-form__error {
-    margin-top: 5px;
-    font-size: 12px;
   }
 }
 

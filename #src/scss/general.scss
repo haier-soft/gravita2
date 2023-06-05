@@ -9,6 +9,13 @@ mark {
 }
 .colls-item {
     align-items: flex-start;
+    margin-bottom: 100px;
+    @media screen and (max-width: 991px) {
+        margin-bottom: 80px;
+    }
+    @media screen and (max-width: 575px) {
+        margin-bottom: 60px;
+    }
 }
 .colls-item__left {
     position: sticky;
