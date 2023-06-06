@@ -1374,10 +1374,18 @@ h6,
   color: rgba(45, 42, 38, 0.8);
 }
 
+.js-news {
+  display: none;
+}
+
 .js-news .carousel .slick-track {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+
+.js-news.active {
+  display: block;
 }
 
 .promo-page__content {

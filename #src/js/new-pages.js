@@ -523,45 +523,63 @@ $(function () {
     }
     //news-slider
     if ($('.js-news').length > 0) {
-        const slickNews = $(".js-news .carousel").slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            swipeToSlide: true,
-            infinite: true,
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 800,
-            prevArrow:
-                '<button class="prev" type="button"><svg><use href="img/icons/sprite.svg#arrow-left"></svg></button>',
-            nextArrow:
-                '<button class="next" type="button"><svg><use href="img/icons/sprite.svg#arrow-right"></svg></button>',
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                        slidesToShow: 2,
+        $(".js-news").each(function () {
+            let thisNews = $(this)
+            const slickNews = thisNews.find(".carousel").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                swipeToSlide: true,
+                infinite: true,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 800,
+                prevArrow:
+                    '<button class="prev" type="button"><svg><use href="img/icons/sprite.svg#arrow-left"></svg></button>',
+                nextArrow:
+                    '<button class="next" type="button"><svg><use href="img/icons/sprite.svg#arrow-right"></svg></button>',
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 2,
+                        },
                     },
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 1,
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                        },
                     },
-                },
-            ],
-        });
-
-        let currentSlideNews = slickNews.slick("slickCurrentSlide") + 1;
-        let totalSlidesNews = slickNews.slick("getSlick").slideCount;
-
-        $(".js-news .counter__current").text(currentSlideNews);
-        $(".js-news .counter__total").text(totalSlidesNews);
-
-        slickNews.on("afterChange", function (event, slick, currentSlide, nextSlide) {
-            $(".js-news .counter__current").text(currentSlide + 1);
-        });
+                ],
+            });
+    
+            let currentSlideNews = slickNews.slick("slickCurrentSlide") + 1;
+            let totalSlidesNews = slickNews.slick("getSlick").slideCount;
+    
+            thisNews.find(".counter__current").text(currentSlideNews);
+            thisNews.find(".counter__total").text(totalSlidesNews);
+            if (!this.classList.contains("active")) {
+                slickNews.slick("slickPause")
+            }
+            slickNews.on("afterChange", function (event, slick, currentSlide, nextSlide) {
+                thisNews.find(".counter__current").text(currentSlide + 1);
+            });
+        })
     }
+    $(".news-slider .tabs__item").on("click", function () {
+        let activeNav = $(this).attr("data-nav")
+        $(".news-slider .js-news").each(function () {
+            $(this).find(".carousel").slick('slickPause')
+        });
+        $(this).addClass("active").siblings(".tabs__item").removeClass("active");
+        $(`[data-block=${activeNav}]`)
+            .addClass("active")
+            .siblings("[data-block]")
+            .removeClass("active");
+            $(".js-news.active .carousel").slick('setPosition');
+            $(".js-news.active .carousel").slick('slickPlay');
+    })
     //designers-slider
     if ($('.js-designers').length > 0) {
         const slickDesigners = $(".js-designers .carousel").slick({

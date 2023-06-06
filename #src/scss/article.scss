@@ -145,7 +145,11 @@
     }
 }
 .js-news {
+    display: none;
     .carousel .slick-track {
         align-items: flex-start;
+    }
+    &.active {
+        display: block;
     }
 }

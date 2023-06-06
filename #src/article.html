@@ -108,11 +108,11 @@
             <section class="section news-slider">
                 <div class="container">
                     <h2 class="section__title section__title--sm">Другие новости</h2>
-                    <div class="tabs">
-                        <a href="#" class="tabs__item active">Последние</a>
-                        <a href="#" class="tabs__item">Похожие</a>
-                    </div>
-                    <div class="js-news">
+                    <nav class="tabs">
+                        <div class="tabs__item active" data-nav="js-news-1">Последние</div>
+                        <div class="tabs__item" data-nav="js-news-2">Похожие</div>
+                    </nav>
+                    <div class="js-news active" data-block="js-news-1">
                         <div class="carousel">
                             <article class="item-news">
                                 <div class="item-news__header">
@@ -160,6 +160,97 @@
                                         <picture>
                                             <source srcset="img/webp/news-1.webp" type="image/webp">
                                             <img src="img/news-1.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-2.webp" type="image/webp">
+                                            <img src="img/news-2.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- counter-->
+                        <div class="counter">
+                            <span class="counter__current"></span>
+                            <span>\</span>
+                            <span class="counter__total"></span>
+                        </div>
+                        <!-- end counter-->
+                    </div>
+                    <div class="js-news" data-block="js-news-2">
+                        <div class="carousel">
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-2.webp" type="image/webp">
+                                            <img src="img/news-2.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-1.webp" type="image/webp">
+                                            <img src="img/news-1.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <div class="page-labels">
+                                        <span>Дизайн</span>
+                                        <span>компания</span>
+                                    </div>
+                                </div>
+                                <div class="item-news__content">
+                                    <h5><a href="#">Новые тренды в дизайне</a></h5>
+                                    <div class="item-news__date">12:30<span>/</span>12 дек<span>/</span>2023</div>
+                                    <p>Коллекция посвещена холодным, синим тонам морского океана, который дарит
+                                        умиротворение и спокойствие</p>
+                                </div>
+                            </article>
+                            <article class="item-news">
+                                <div class="item-news__header">
+                                    <a href="#" class="media-cover item-news__preview">
+                                        <picture>
+                                            <source srcset="img/webp/news-3.webp" type="image/webp">
+                                            <img src="img/news-3.jpg" alt="">
                                         </picture>
                                     </a>
                                     <div class="page-labels">
