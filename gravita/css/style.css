@@ -3882,6 +3882,16 @@ h6,
   animation: 1s linear border-link;
 }
 
+.fancybox-thumbs__list a::before {
+  border: 0;
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+.fancybox-thumbs__list a.fancybox-thumbs-active::before {
+  opacity: 0;
+}
+
 @media (min-width: 1599px) {
   .cart-empty .title {
     margin-bottom: 60px;
