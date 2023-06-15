@@ -375,6 +375,12 @@
             padding-right: 9px;
         }
     }
+    @media screen and (max-width: 359px) {
+        h4 {
+            font-size: 20px;
+        }
+
+    }
 }
 .item-shop {
     padding: 19px 30px;
