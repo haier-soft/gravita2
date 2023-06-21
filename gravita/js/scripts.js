@@ -606,7 +606,7 @@ $(function () {
     e.preventDefault();
     let $tmp = $("<input>");
     $("body").append($tmp);
-    $tmp.val($(this).attr("href")).select();
+    $tmp.val(window.location.href).select();
     document.execCommand("copy");
     $tmp.remove();
     $(".js-copy-label-light").addClass("open");
@@ -616,6 +616,20 @@ $(function () {
     }, 3500);
   });
 
+  $(".share-list__item").each(function() {
+    $(this).attr("target", "_blank")
+    if (this.classList.contains("telegram")) {
+      $(this).attr("href","https://t.me/share/url?url=" + encodeURIComponent(window.location.href))
+    } else if (this.classList.contains("vk")) {
+      $(this).attr("href","https://vk.com/share.php?url=" + encodeURIComponent(window.location.href))
+    } else if (this.classList.contains("whatsapp")) {
+      $(this).attr("href","whatsapp://send?text=" + encodeURIComponent(window.location.href))
+    } else if (this.classList.contains("viber")) {
+      $(this).attr("href","viber://forward?text=" + encodeURIComponent(window.location.href))
+    } else if (this.classList.contains("odnoklassniki")) {
+      $(this).attr("href","https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=" + encodeURIComponent(window.location.href))
+    }
+  })
   /*
    * Collection
    */

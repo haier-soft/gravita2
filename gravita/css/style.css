@@ -1702,6 +1702,7 @@ h6,
 }
 
 .item-cert__preview {
+  display: block;
   padding-top: 100%;
   position: relative;
   overflow: hidden;
