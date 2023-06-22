@@ -370,19 +370,6 @@ $(function () {
   });
 
   /*
-   *  Плавный скрол
-   */
-
-  if (screenWidth > 767) {
-    $(".js-anchor").on("click", function () {
-      let elementClick = $(this).attr("href");
-      let destination = $(elementClick).offset().top - 84;
-      $("html,body").animate({ scrollTop: destination }, 600);
-      return false;
-    });
-  }
-
-  /*
    * Catalog search
    */
 

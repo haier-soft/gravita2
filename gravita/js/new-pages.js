@@ -721,5 +721,5 @@ $(function () {
         ).join("")}
       `);
       }
-
+    $('.s-result .js-anchor')
 })
