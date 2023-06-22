@@ -765,6 +765,10 @@
             activePlacemark = e.get('target');
             activePlacemark.options.set('iconImageHref', 'img/icons/map-marker-active.svg')
           }) 
+          map.events.add('click', function (e) {  
+            map.balloon.close();
+            activePlacemark.options.set('iconImageHref', 'img/icons/map-sprite.svg');
+          });
         }
         
         ymaps.ready(init);
