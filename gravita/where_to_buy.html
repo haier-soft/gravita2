@@ -769,6 +769,9 @@
             map.balloon.close();
             activePlacemark.options.set('iconImageHref', 'img/icons/map-sprite.svg');
           });
+          map.geoObjects.events.add('balloonclose', function (e) {
+            activePlacemark.options.set('iconImageHref', 'img/icons/map-sprite.svg');
+          });
         }
         
         ymaps.ready(init);
