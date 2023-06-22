@@ -615,21 +615,58 @@ $(function () {
       $(".js-copy-label-light").removeClass("open");
     }, 3500);
   });
-
-  $(".share-list__item").each(function() {
-    $(this).attr("target", "_blank")
-    if (this.classList.contains("telegram")) {
-      $(this).attr("href","https://t.me/share/url?url=" + encodeURIComponent(window.location.href))
-    } else if (this.classList.contains("vk")) {
-      $(this).attr("href","https://vk.com/share.php?url=" + encodeURIComponent(window.location.href))
-    } else if (this.classList.contains("whatsapp")) {
-      $(this).attr("href","whatsapp://send?text=" + encodeURIComponent(window.location.href))
-    } else if (this.classList.contains("viber")) {
-      $(this).attr("href","viber://forward?text=" + encodeURIComponent(window.location.href))
-    } else if (this.classList.contains("odnoklassniki")) {
-      $(this).attr("href","https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=" + encodeURIComponent(window.location.href))
-    }
-  })
+  if (document.querySelector(".share-list")) {
+    const url = encodeURIComponent(window.location.href)
+    const title = encodeURIComponent(document.title)
+    let linkMass = [
+      {
+        title: 'Телеграм',
+        href: "https://t.me/share/url?url=" + url + '&text=' + title,
+        img: "img/icons/baseline-telegram.svg"
+      },
+      {
+        title: 'VK',
+        href: "https://vk.com/share.php?url=" + url,
+        img: "img/icons/simple-icons_vk.svg"
+      },
+      {
+        title: 'WhatsApp',
+        href: "whatsapp://send?text=" + url,
+        img: "img/icons/baseline-whatsapp.svg"
+      },
+      {
+        title: 'Viber',
+        href: "viber://forward?text=" + url,
+        img: "img/icons/viber-outline.svg"
+      },
+      {
+        title: 'Одноклассники',
+        href: "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=" + url,
+        img: "img/icons/ok-ru.svg"
+      },
+    ]
+    document.querySelector(".share-list").insertAdjacentHTML('beforeend', `
+      ${linkMass.map(item => `<a class="share-list__item" href="${item.href}" target="_blank" rel="noopener">
+         <img src="${item.img}" alt="">
+         <span>${item.title}</span>
+      </a>`
+    ).join("")}
+  `);
+  }
+ /* $(".share-list__item").each(function () {
+      $(this).attr("target", "_blank")
+     if (this.classList.contains("telegram")) {
+       $(this).attr("href","https://t.me/share/url?url=" + encodeURIComponent(window.location.href))
+     } else if (this.classList.contains("vk")) {
+       $(this).attr("href","https://vk.com/share.php?url=" + encodeURIComponent(window.location.href))
+     } else if (this.classList.contains("whatsapp")) {
+       $(this).attr("href","whatsapp://send?text=" + encodeURIComponent(window.location.href))
+     } else if (this.classList.contains("viber")) {
+       $(this).attr("href","viber://forward?text=" + encodeURIComponent(window.location.href))
+     } else if (this.classList.contains("odnoklassniki")) {
+       $(this).attr("href","https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=" + encodeURIComponent(window.location.href))
+     } 
+  })*/
   /*
    * Collection
    */
