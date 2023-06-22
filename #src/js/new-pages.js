@@ -682,6 +682,44 @@ $(function () {
         $('html,body').animate({ scrollTop: destination - 30 }, 1000);
         return false;
     });
-
+    if (document.querySelector(".share-list")) {
+        const url = encodeURIComponent(window.location.href)
+        const title = encodeURIComponent(document.title)
+        let linkMass = [
+          {
+            title: 'Телеграм',
+            href: "https://t.me/share/url?url=" + url + '&text=' + title,
+            img: "img/icons/baseline-telegram.svg"
+          },
+          {
+            title: 'VK',
+            href: "https://vk.com/share.php?url=" + url + "&title=" + title,
+            img: "img/icons/simple-icons_vk.svg"
+          },
+          {
+            title: 'WhatsApp',
+            href: "https://api.whatsapp.com/send?text=" + encodeURIComponent(document.title + " " + window.location.href),
+            img: "img/icons/baseline-whatsapp.svg"
+          },
+          {
+            title: 'Viber',
+            href: "viber://forward?text=" + url,
+            img: "img/icons/viber-outline.svg"
+          },
+          {
+            title: 'Одноклассники',
+            href: "https://connect.ok.ru/offer?url=" + url + "&title=" + title,
+            img: "img/icons/ok-ru.svg"
+          },
+        ]
+        
+        document.querySelector(".share-list").insertAdjacentHTML('beforeend', `
+          ${linkMass.map(item => `<a class="share-list__item" href="${item.href}" target="_blank" rel="noopener">
+             <img src="${item.img}" alt="">
+             <span>${item.title}</span>
+          </a>`
+        ).join("")}
+      `);
+      }
 
 })

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include("_head.html")
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/icons/sprite.svg"
+        title="Ваш браузер не поддерживает SVG"></object>
+    <div id="panel">
+    </div>
+    <div class="wrap">
+        @@include("_header.html")
+        <main>
+            <div class="container">
+                <!-- breadcrumbs-->
+                <nav class="breadcrumbs">
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Главная</span></a></div>
+                    <div class="breadcrumbs__item"><span>Результат поиска</span></div>
+                </nav>
+            </div>
+            <!--shops-->
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">“Кухня”</h1>
+                    <nav class="tabs tabs-scroll">
+                        <div class="tabs__item" data-nav="search-products-1"><span>все (20)</span></div>
+                        <div class="tabs__item active" data-nav="search-products-2"><span>товары (6)</span></div>
+                        <div class="tabs__item" data-nav="search-products-3"><span>коллекции (4)</span></div>
+                        <div class="tabs__item" data-nav="search-products-3"><span>новости (2)</span></div>
+                        <div class="tabs__item" data-nav="search-products-3"><span>Реализованные проекты (8)</span></div>
+                    </nav>
+                    <div class="result__block" data-block="search-products-1">
+                        <h2>все (20)</h2>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include("_footer.html")
+    </div>
+    @@include("_fixed-el.html")
+</body>
+
+</html>

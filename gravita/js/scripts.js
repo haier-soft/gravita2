@@ -110,6 +110,12 @@ $(function () {
     location.find(".location__dropdown").fadeOut();
     location.find(".overlay").remove();
   });
+  $(".menu__link").on("click", function () {
+    $(".search").slideUp();
+    $(".dropdown").slideUp();
+    $("body").removeClass("noscroll");
+    $(".menu-toggle").removeClass("open");
+  });
 
   /*
    *  Video
@@ -615,59 +621,7 @@ $(function () {
       $(".js-copy-label-light").removeClass("open");
     }, 3500);
   });
-  if (document.querySelector(".share-list")) {
-    const url = encodeURIComponent(window.location.href)
-    const title = encodeURIComponent("OCEAN BLUES 40X30")//encodeURIComponent(document.title)
-    let linkMass = [
-      {
-        title: 'Телеграм',
-        href: "https://t.me/share/url?url=" + url + '&text=' + title,
-        img: "img/icons/baseline-telegram.svg"
-      },
-      {
-        title: 'VK',
-        href: "https://vk.com/share.php?url=" + url + "&title=" + title,
-        img: "img/icons/simple-icons_vk.svg"
-      },
-      {
-        title: 'WhatsApp',
-        href: "https://api.whatsapp.com/send?text=" + encodeURIComponent("OCEAN BLUES 40X30" + " " + window.location.href),
-        img: "img/icons/baseline-whatsapp.svg"
-      },
-      {
-        title: 'Viber',
-        href: "viber://forward?text=" + url,
-        img: "img/icons/viber-outline.svg"
-      },
-      {
-        title: 'Одноклассники',
-        href: "https://connect.ok.ru/offer?url=" + url + "&title=" + title,
-        img: "img/icons/ok-ru.svg"
-      },
-    ]
-    
-    document.querySelector(".share-list").insertAdjacentHTML('beforeend', `
-      ${linkMass.map(item => `<a class="share-list__item" href="${item.href}" target="_blank" rel="noopener">
-         <img src="${item.img}" alt="">
-         <span>${item.title}</span>
-      </a>`
-    ).join("")}
-  `);
-  }
- /* $(".share-list__item").each(function () {
-      $(this).attr("target", "_blank")
-     if (this.classList.contains("telegram")) {
-       $(this).attr("href","https://t.me/share/url?url=" + encodeURIComponent(window.location.href))
-     } else if (this.classList.contains("vk")) {
-       $(this).attr("href","https://vk.com/share.php?url=" + encodeURIComponent(window.location.href))
-     } else if (this.classList.contains("whatsapp")) {
-       $(this).attr("href","whatsapp://send?text=" + encodeURIComponent(window.location.href))
-     } else if (this.classList.contains("viber")) {
-       $(this).attr("href","viber://forward?text=" + encodeURIComponent(window.location.href))
-     } else if (this.classList.contains("odnoklassniki")) {
-       $(this).attr("href","https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=" + encodeURIComponent(window.location.href))
-     } 
-  })*/
+
   /*
    * Collection
    */
@@ -805,15 +759,18 @@ $(function () {
     $cataloGrid = $(".catalog-grid").masonry({
       horizontalOrder: true,
       gutter: gutterMasonry,
-      //columnWidth: colMasonryWidth,
       itemSelector: ".catalog-grid__item",
+      columnWidth: '.catalog-grid__item',
+      fitWidth: true,
       lazyLoad: true,
     });
-
+  
     $coolGoods = $(".coll-goods").masonry({
+      horizontalOrder: true,
       gutter: gutterMasonryColl,
-      //columnWidth: colMasonryWidth,
       itemSelector: ".coll-goods__item",
+      columnWidth: '.coll-goods__item',
+      fitWidth: true,
       lazyLoad: true,
     });
     $(".card-items").each(function () {
@@ -821,6 +778,8 @@ $(function () {
         horizontalOrder: true,
         gutter: carditemGutter,
         itemSelector: ".card-item",
+        columnWidth: '.card-item',
+        fitWidth: true,
         lazyLoad: true,
       });
     })
@@ -830,15 +789,18 @@ $(function () {
   $cataloGrid = $(".catalog-grid").masonry({
     horizontalOrder: true,
     gutter: gutterMasonry,
-    //columnWidth: colMasonryWidth,
     itemSelector: ".catalog-grid__item",
+    columnWidth: '.coll-goods__item',
+    fitWidth: true,
     lazyLoad: true,
   });
 
   $coolGoods = $(".coll-goods").masonry({
+    horizontalOrder: true,
     gutter: gutterMasonryColl,
-    //columnWidth: colMasonryWidth,
     itemSelector: ".coll-goods__item",
+    columnWidth: '.coll-goods__item',
+    fitWidth: true,
     lazyLoad: true,
   });
   $(".card-items").each(function () {
@@ -846,6 +808,8 @@ $(function () {
       horizontalOrder: true,
       gutter: carditemGutter,
       itemSelector: ".card-item",
+      columnWidth: '.card-item',
+      fitWidth: true,
       lazyLoad: true,
     });
   })
@@ -932,5 +896,5 @@ $(function () {
       to: val,
     });
   });
-
 });
+
