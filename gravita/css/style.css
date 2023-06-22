@@ -3762,10 +3762,6 @@ h6,
   display: none;
 }
 
-.map [class*=balloon__close] {
-  display: none;
-}
-
 .map [class*=balloon__content] {
   background: rgba(255, 255, 255, 0.03);
   -webkit-backdrop-filter: blur(124px);
