@@ -617,7 +617,7 @@ $(function () {
   });
   if (document.querySelector(".share-list")) {
     const url = encodeURIComponent(window.location.href)
-    const title = encodeURIComponent(document.title)
+    const title = encodeURIComponent("OCEAN BLUES 40X30")//encodeURIComponent(document.title)
     let linkMass = [
       {
         title: 'Телеграм',
@@ -626,12 +626,12 @@ $(function () {
       },
       {
         title: 'VK',
-        href: "https://vk.com/share.php?url=" + url,
+        href: "https://vk.com/share.php?url=" + url + "&title=" + title,
         img: "img/icons/simple-icons_vk.svg"
       },
       {
         title: 'WhatsApp',
-        href: "whatsapp://send?text=" + url,
+        href: "https://api.whatsapp.com/send?text=" + encodeURIComponent("OCEAN BLUES 40X30" + " " + window.location.href),
         img: "img/icons/baseline-whatsapp.svg"
       },
       {
@@ -641,10 +641,11 @@ $(function () {
       },
       {
         title: 'Одноклассники',
-        href: "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=" + url,
+        href: "https://connect.ok.ru/offer?url=" + url + "&title=" + title,
         img: "img/icons/ok-ru.svg"
       },
     ]
+    
     document.querySelector(".share-list").insertAdjacentHTML('beforeend', `
       ${linkMass.map(item => `<a class="share-list__item" href="${item.href}" target="_blank" rel="noopener">
          <img src="${item.img}" alt="">
