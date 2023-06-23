@@ -4018,50 +4018,6 @@ h6,
   margin-left: 10px;
 }
 
-.loader-wrapper {
-  min-height: 100px;
-  position: relative;
-}
-
-.loader-wrapper:after {
-  content: "";
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 500;
-}
-
-.loader-wrapper.loading:after {
-  display: block;
-}
-
-.loader-wrapper.loading .loader-icon {
-  display: block;
-}
-
-.loader-wrapper.loading .catalog__more {
-  opacity: 0;
-}
-
-.loader-icon {
-  display: none;
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  width: 64px;
-  height: 64px;
-  background: url(../img/icons/loader.gif) center/contain no-repeat;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 501;
-}
-
 @media (min-width: 1599px) {
   .cart-empty .title {
     margin-bottom: 60px;
