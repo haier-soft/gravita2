@@ -17,8 +17,8 @@ $(function() {
         console.log(href);
     });
     $(document).on("click", ".catalog__more", function (e) {
-
         let url = $(this).attr('href');
+        let thisBlock = $(this);
         let tmpUrl = $(this).data('pager');
         $.ajax({
             type: "POST",
@@ -26,41 +26,75 @@ $(function() {
             url: url,
             success: function (response) {
                 let page_content = $(response);
-
-                if ($('.loadCards').length > 0) {
-                    let $moreBlocks = $(page_content.find('.loadCards').html());
-                    if (page_content.find('.loadCards').length > 0) {
-                        $('.loadCards').append($moreBlocks);
-                        setTimeout(function(){
-                            $cataloGrid.masonry('appended', $moreBlocks);
-                        }, 100);
-                        /*$('.loadCards').imagesLoaded().progress( function() {
-
-                        });*/
-                    } else {
-                        $('.loadCards').html('');
+                if($(thisBlock).parents('.loadPagination').hasClass('paginationReviews')){
+                    if ($('.loadReviews').length > 0) {
+                        let $moreBlocks = $(page_content.find('.loadReviews').html());
+                        if (page_content.find('.loadCards').length > 0) {
+                            $('.loadReviews').append($moreBlocks);
+                        } else {
+                            $('.loadReviews').html('');
+                        }
                     }
-                }
-                if ($('.loadCollection').length > 0) {
-                    let $moreBlocks = $(page_content.find('.loadCollection').html());
-                    if (page_content.find('.loadCollection').length > 0) {
-                        $('.loadCollection').append($moreBlocks);
-                        /*$('.loadCollection').imagesLoaded().progress( function() {
-                            $cataloGrid.masonry('appended', $moreBlocks);
-                        });*/
-                        setTimeout(function(){
-                            $cataloGrid.masonry('appended', $moreBlocks);
-                        }, 100);
+                    if (page_content.find('.paginationReviews').length > 0) {
+                        $('.paginationReviews').eq(0).html(page_content.find('.paginationReviews').html());
                     } else {
-                        $('.loadCollection').html('');
+                        $('.paginationReviews').eq(0).html('');
                     }
-                }
+                }else {
+                    if ($('.loadCards').length > 0) {
+                        let $moreBlocks = $(page_content.find('.loadCards').html());
+                        if (page_content.find('.loadCards').length > 0) {
+                            $('.loadCards').append($moreBlocks);
+                            $('.loader').show();
+                            if ($(".card-items").length > 0) {
+                                setTimeout(function () {
+                                    $cardItems.masonry('appended', $moreBlocks);
+                                    $('.loader').hide();
+                                }, 500);
+                            } else {
+                                setTimeout(function () {
+                                    $cataloGrid.masonry('appended', $moreBlocks);
+                                    $('.loader').hide();
+                                }, 500);
+                            }
+                            /*$('.loadCards').imagesLoaded().progress( function() {
+
+                            });*/
+                        } else {
+                            $('.loadCards').html('');
+                        }
+                    }
+                    if ($('.loadCollection').length > 0) {
+                        let $moreBlocks = $(page_content.find('.loadCollection').html());
+                        let $moreGoods = $moreBlocks.find('.coll-goods').html();
+                        console.log($moreBlocks.find('.coll-goods').length);
+                        if (page_content.find('.loadCollection').length > 0) {
+                            $('.loadCollection').append($moreBlocks);
+                            /*$('.loadCollection').imagesLoaded().progress( function() {
+                                $cataloGrid.masonry('appended', $moreBlocks);
+                            });*/
+                            setTimeout(function () {
+                                $cataloGrid.masonry('appended', $moreBlocks);
+                                $moreBlocks.find('.coll-goods').each(function(index, element){
+                                    $(this).masonry({
+                                        gutter: gutterMasonryColl,
+                                        //columnWidth: colMasonryWidth,
+                                        itemSelector: ".coll-goods__item",
+                                        lazyLoad: true,
+                                    });
+                                });
+                            }, 200);
+                        } else {
+                            $('.loadCollection').html('');
+                        }
+                    }
 
 
-                if (page_content.find('.loadPagination').length > 0) {
-                    $('.loadPagination').html(page_content.find('.loadPagination').html());
-                } else {
-                    $('.loadPagination').html('');
+                    if (page_content.find('.loadPagination').length > 0) {
+                        $('.loadPagination').eq(0).html(page_content.find('.loadPagination').html());
+                    } else {
+                        $('.loadPagination').eq(0).html('');
+                    }
                 }
                 window.history.pushState(null, null, tmpUrl);
 
@@ -193,9 +227,14 @@ $(function() {
         e.preventDefault();
     });
 
-    $('#js-modal-samples input[name="NAME"], #js-modal-callback input[name="NAME"]').on('input', function (e) {//валидация ФИО
+    $('input[name="NAME"], input[name="PROP[1]"]').on('input', function (e) {//валидация ФИО
         let val = $(this).val();
         let res = val.replace(/[^а-я ]/gi, '');
+        $(this).val(res);
+    });
+    $('input[name="SQUARE_ROOM"], input[name="EXPERIENCE"], input[name="COST"]').on('input', function (e) {//валидация ФИО
+        let val = $(this).val();
+        let res = val.replace(/[^0-9,. ]/gi, '');
         $(this).val(res);
     });
 
@@ -209,6 +248,27 @@ $(function() {
     $('#js-modal-samples form').on('submit', function (e) {
         let error = false;
         let email = $(this).find('input[name="EMAIL"]').val();
+
+        $(this).find('.required').each(function(index, element) {
+            let typeInput = $(this).attr('type');
+
+            if(typeInput=="text" || typeInput=="tel"){
+                if($(this).val()==""){
+                    $(this).parent().addClass('error');
+                    error = true;
+                }else{
+                    $(this).parent().removeClass('error');
+                }
+            }else if(typeInput=="email"){
+                if (!validateEmail(email)) {
+                    error = true;
+                    $(form).find('input[type="email"]').parent().addClass('error');
+                }else{
+                    $(form).find('input[type="email"]').parent().removeClass('error');
+                }
+            }
+        });
+
         $(this).find('input[name="EMAIL"]').parent().removeClass('error');
         if (email != "") {
             if (!validateEmail(email)) {
@@ -243,6 +303,25 @@ $(function() {
     });
     $('#js-modal-callback form').on('submit', function (e) {
         let error = false;
+        $(this).find('.required').each(function(index, element) {
+            let typeInput = $(this).attr('type');
+
+            if(typeInput=="text" || typeInput=="tel"){
+                if($(this).val()==""){
+                    $(this).parent().addClass('error');
+                    error = true;
+                }else{
+                    $(this).parent().removeClass('error');
+                }
+            }else if(typeInput=="email"){
+                if (!validateEmail(email)) {
+                    error = true;
+                    $(form).find('input[type="email"]').parent().addClass('error');
+                }else{
+                    $(form).find('input[type="email"]').parent().removeClass('error');
+                }
+            }
+        });
         if (!error) {
             let param = $.param({
                 MODE: 'formCallback'
@@ -269,6 +348,25 @@ $(function() {
     });
     $('#js-modal-3d_design form').on('submit', function (e) {
         let error = false;
+        $(this).find('.required').each(function(index, element) {
+            let typeInput = $(this).attr('type');
+
+            if(typeInput=="text" || typeInput=="tel"){
+                if($(this).val()==""){
+                    $(this).parent().addClass('error');
+                    error = true;
+                }else{
+                    $(this).parent().removeClass('error');
+                }
+            }else if(typeInput=="email"){
+                if (!validateEmail(email)) {
+                    error = true;
+                    $(form).find('input[type="email"]').parent().addClass('error');
+                }else{
+                    $(form).find('input[type="email"]').parent().removeClass('error');
+                }
+            }
+        });
         if (!error) {
             let param = $.param({
                 MODE: 'form3Ddesign'
@@ -548,6 +646,343 @@ $(function() {
             $(".js-similar-style .counter__current").text(currentSlide + 1);
         });
     }
+
+    /*О компании*/
+    $('#aboutForm, #projectForm, #sendReviewForm').on('submit', function (e) {
+        let $that = $(this),
+            form = $(this),
+            error = false,
+            formData = new FormData($that.get(0)); // создаем новый экземпляр объекта и передаем ему нашу форму (*)
+
+        $(this).find('.required').each(function(index, element) {
+            let typeInput = $(this).attr('type');
+
+            if(typeInput=="text" || typeInput=="tel"){
+                if($(this).val()==""){
+                    $(this).parent().addClass('error');
+                    error = true;
+                }else{
+                    $(this).parent().removeClass('error');
+                }
+            }else if(typeInput=="email"){
+                if (!validateEmail(email)) {
+                    error = true;
+                    $(form).find('input[type="email"]').parent().addClass('error');
+                }else{
+                    $(form).find('input[type="email"]').parent().removeClass('error');
+                }
+            }
+        });
+        if(!error){
+            $.ajax({
+                url: "/local/include/ajax/ajax.php",
+                type: "POST",
+                dataType: "json",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(response){
+                    if (response.type == "success") {
+                        formOnSuccess(form);
+                    } else {
+                        $("#js-modal-error").fadeIn(500);
+                        $("body").addClass("noscroll");
+                    }
+                }
+            });
+        }
+        e.preventDefault();
+    });
+    $('#aboutForm input[name="FIO"]').on('input', function(e){//валидация ФИО
+        let val = $(this).val();
+        let res = val.replace(/[^а-я ]/gi, '');
+        $(this).val(res);
+    });
+    /*Новости / статьи*/
+    $(".news-slider .tabs__item").on("click", function () {
+        let activeNav = $(this).attr("data-nav")
+        if (window.innerWidth <= 991) {
+            $(".news-slider .js-team").each(function () {
+                $(this).find(".carousel").slick('slickPause')
+            });
+        }
+        $(this).addClass("active").siblings(".tabs__item").removeClass("active");
+        $(`[data-block=${activeNav}]`)
+            .addClass("active")
+            .siblings("[data-block]")
+            .removeClass("active");
+        if (window.innerWidth <= 991) {
+            $(".news-slider .js-team.active .carousel").slick('setPosition');
+            $(".news-slider .js-team.active .carousel").slick('slickPlay');
+        }
+    });
+    /*Корзина*/
+    $('.item-cart .js-plus-o').on('click', function (e) {
+        let cartID = $(this).parents('.item-cart').data('basket');
+        let productQuantityPieces = $('#productQuantityDef_'+cartID).val();
+        let productQuantityOsn = $('#productQuantityOsn_'+cartID).val();
+        let productQuantity = $('#productQuantity_'+cartID).val();
+        let typeMeasure = $('#basket_'+cartID+' input[name="unit"]:checked').val();
+        let addPodrezka = 'N';
+        let param = $.param({
+            'PODREZKA': addPodrezka,
+            'QUANTITY': productQuantity,
+            'QUANTITY_PIECES': productQuantityPieces,
+            'QUANTITY_OSN': productQuantityOsn,
+            'MEASURE': typeMeasure,
+            'TYPE': 'plus',
+            'DEFAULT': omniProductCart[cartID]
+        });
+        sendCalculateBsk(param, cartID);
+        e.preventDefault();
+    });
+    $('.item-cart .js-minus-o').on('click', function (e) {
+        let cartID = $(this).parents('.item-cart').data('basket');
+        let productQuantityPieces = $('#productQuantityDef_'+cartID).val();
+        let productQuantityOsn = $('#productQuantityOsn_'+cartID).val();
+        let productQuantity = $('#productQuantity_'+cartID).val();
+        let typeMeasure = $('#basket_'+cartID+' input[name="unit"]:checked').val();
+        let addPodrezka = 'N';
+        let param = $.param({
+            'PODREZKA': addPodrezka,
+            'QUANTITY': productQuantity,
+            'QUANTITY_PIECES': productQuantityPieces,
+            'QUANTITY_OSN': productQuantityOsn,
+            'MEASURE': typeMeasure,
+            'TYPE': 'minus',
+            'DEFAULT': omniProductCart[cartID]
+        });
+        sendCalculateBsk(param, cartID);
+        e.preventDefault();
+    });
+    $('.item-cart input[name="QUANTITY"]').on('change', function (e) {
+        let cartID = $(this).parents('.item-cart').data('basket');
+        let productQuantityPieces = $('#productQuantityDef_'+cartID).val();
+        let productQuantityOsn = $('#productQuantityOsn_'+cartID).val();
+        let productQuantity = $('#productQuantity_'+cartID).val();
+        let typeMeasure = $('#basket_'+cartID+' input[name="unit"]:checked').val();
+        let addPodrezka = 'N';
+        let param = $.param({
+            'PODREZKA': addPodrezka,
+            'QUANTITY': productQuantity,
+            'QUANTITY_PIECES': productQuantityPieces,
+            'QUANTITY_OSN': productQuantityOsn,
+            'MEASURE': typeMeasure,
+            'TYPE': 'change',
+            'DEFAULT': omniProductCart[cartID]
+        });
+        sendCalculateBsk(param, cartID);
+        e.preventDefault();
+    });
+    $('.item-cart .item-cart__radio input').on('click', function (e) {
+        let cartID = $(this).parents('.item-cart').data('basket');
+        let productQuantityPieces = $('#productQuantityDef_'+cartID).val();
+        let productQuantityOsn = $('#productQuantityOsn_'+cartID).val();
+        let productQuantity = $('#productQuantity_'+cartID).val();
+        let typeMeasure = $('#basket_'+cartID+' input[name="unit"]:checked').val();
+        let lastMeasure = $('#productMeasureLast_'+cartID).val();
+        let addPodrezka = 'N';
+        let param = $.param({
+            'PODREZKA': addPodrezka,
+            'QUANTITY': productQuantity,
+            'QUANTITY_PIECES': productQuantityPieces,
+            'QUANTITY_OSN': productQuantityOsn,
+            'MEASURE': typeMeasure,
+            'LAST_MEASURE': lastMeasure,
+            'TYPE': 'ratio',
+            'DEFAULT': omniProductCart[cartID]
+        });
+        sendCalculateBsk(param, cartID, true);
+        $('#productMeasureLast_'+cartID).val(typeMeasure);
+    });
+    $('.promocode').on('submit', function(e){
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            data: $(this).serializeArray(),
+            url: "/local/include/ajax/ajax.php?MODE=addCupon",
+            success: function(response){
+                if(response.type=="error"){
+                    $('.promocode-error').text(response.text).show();
+                    $('.promocode input').addClass('errorInput');
+                }else{
+                    $('.promocode-error').hide();
+                    $('.promocode input').removeClass('errorInput');
+                    window.location.reload();
+                }
+            }
+        });
+        e.preventDefault();
+    });
+    $('.promocode__delete').on('click', function(e){
+        let promocode = $(this).data('promocode');
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/local/include/ajax/ajax.php?MODE=delCupon&COUPON="+promocode,
+            success: function(response){
+                if(response.type=="error"){
+                    $('.promocode-error').text(response.text).show();
+                    $('.promocode input').addClass('errorInput');
+                }else{
+                    $('.promocode-error').hide();
+                    $('.promocode input').removeClass('errorInput');
+                    window.location.reload();
+                }
+            }
+        });
+        e.preventDefault();
+    });
+    $('.item-cart__del').on('click', function (e) {
+        let cartID = $(this).parents('.item-cart').data('basket');
+        let countCart = $('.item-cart').length;
+        let itemCart = $(this).parents('.item-cart');
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/local/include/ajax/ajax.php?MODE=delCart&cartID="+cartID,
+            success: function(response){
+                if(countCart==1){
+                    window.location.reload();
+                }else{
+                    $(itemCart).remove();
+                    $('.section.cart .title span').text(countCart-1);
+                    $('.cart-sum').load('/local/include/ajax/ajax.php?MODE=loadFullTotalCart');
+                }
+            }
+        });
+        e.preventDefault();
+    });
+    /*Оформление заказа*/
+    $("#orderForm").on('submit', function(e) {//Оформление заказа
+        let error = false;
+        let form = $(this);
+        let email = $(this).find('input[type="email"]').val();
+        $("#orderForm .required").each(function(index, element) {
+            let typeInput = $(this).attr('type');
+
+            if(typeInput=="text" || typeInput=="tel"){
+                if($(this).val()==""){
+                    $(this).parent().addClass('error');
+                    error = true;
+                }else{
+                    $(this).parent().removeClass('error');
+                }
+            }else if(typeInput=="email"){
+                if (!validateEmail(email)) {
+                    error = true;
+                    $(form).find('input[type="email"]').parent().addClass('error');
+                }else{
+                    $(form).find('input[type="email"]').parent().removeClass('error');
+                }
+            }
+        });
+        if(!error) {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                data: $(this).serializeArray(),
+                url: "/local/include/ajax/ajax.php?MODE=addOrder",
+                success: function (response) {
+                    if (response.error == "1") {
+                        window.location = "/order/?ORDER_ID=" + response.order;
+                    } else {
+                        if(response.typeError=="phone"){
+                            $(form).find('.phone').parent().addClass('error');
+                            $('html, body').animate({
+                                scrollTop: $("#orderForm").offset().top // класс объекта к которому приезжаем
+                            }, 1000); // Скорость прокрутки
+                        }else{
+                            window.location = "/order/error.php";
+                        }
+                    }
+                }
+            });
+        }else{
+            $('html, body').animate({
+                scrollTop: $("#orderForm").offset().top // класс объекта к которому приезжаем
+            }, 1000); // Скорость прокрутки
+        }
+        e.preventDefault();
+    });
+    /*Дизайнеры*/
+    $('#orderProjectForm').on('submit', function (e) {//
+        let $that = $(this),
+            form = $(this),
+            error = false;
+
+        $(this).find('[required]').each(function(){
+            if($(this).val()==''){
+                $(this).parent().addClass('error');
+                error = true;
+            }else{
+                $(this).parent().removeClass('error');
+            }
+        });
+        if(!error){
+            $.ajax({
+                url: "/local/include/ajax/ajax.php",
+                type: "POST",
+                dataType: "json",
+                data: $(this).serializeArray(),
+                success: function(response){
+                    if (response.type == "success") {
+                        formOnSuccess(form);
+                    } else {
+                        $("#js-modal-error").fadeIn(500);
+                        $("body").addClass("noscroll");
+                    }
+                }
+            });
+        }
+        e.preventDefault();
+    });
+    /*Проекты*/
+    $('#contactDesignerForm, #writeUsForm').on('submit', function (e) {// Форма связаться с дизайнером
+        let $that = $(this),
+            form = $(this),
+            error = false;
+        $(this).find('.required').each(function(index, element) {
+            let typeInput = $(this).attr('type');
+
+            if(typeInput=="text" || typeInput=="tel"){
+                if($(this).val()==""){
+                    $(this).parent().addClass('error');
+                    error = true;
+                }else{
+                    $(this).parent().removeClass('error');
+                }
+            }else if(typeInput=="email"){
+                if (!validateEmail(email)) {
+                    error = true;
+                    $(form).find('input[type="email"]').parent().addClass('error');
+                }else{
+                    $(form).find('input[type="email"]').parent().removeClass('error');
+                }
+            }
+        });
+        if(!error){
+            $.ajax({
+                url: "/local/include/ajax/ajax.php",
+                type: "POST",
+                dataType: "json",
+                data: $(this).serializeArray(),
+                success: function(response){
+                    if (response.type == "success") {
+                        formOnSuccess(form);
+                    } else {
+                        $("#js-modal-error").fadeIn(500);
+                        $("body").addClass("noscroll");
+                    }
+                }
+            });
+        }
+        e.preventDefault();
+    });
+    $('.header .dropdown .menu .menu__link').on('click', function(){
+        $('.menu-toggle.open').trigger('click');
+    })
 });
 function masonry(){
     let windowWidth = $(window).width();
@@ -689,6 +1124,42 @@ function sendCalculate(param){//Правильно рассчитываем и �
                     $('#totalPrice').html(data.printTotalPrice);
                 }
             }
+        }
+    });
+}
+function sendCalculateBsk(param, cartID, noCart=false){//Правильно рассчитываем и меняем корзину
+    let count = 0;
+    $.ajax({
+        url: "/local/include/ajax/calc.php",
+        type: "POST",
+        dataType: "json",
+        async: false,
+        data: param,
+        success: function(data){
+
+            if(!data.error){
+                $('#productQuantity_'+cartID).val(data.count);
+                $('#productQuantityDef_'+cartID).val(data.countCart);
+                $('#productQuantityOsn_'+cartID).val(data.countOsn);
+                /*if(data.printOldPrice=="Y"){
+                    $('#totalPrice_').html(data.printTotalPrice+'<span>'+data.printTotalPriceOld+'</span>');
+                }else{*/
+                    $('#totalPrice_'+cartID).html(data.printTotalPrice);
+                //}
+                if(!noCart){
+                    editCart(cartID, data.countCart);
+                }
+            }
+        }
+    });
+}
+function editCart(cartID, quantity){
+    $.ajax({
+        url: "/local/include/ajax/ajax.php?MODE=editCart&cartID="+cartID+"&QUANTITY="+quantity,
+        type: "POST",
+        dataType: "json",
+        success: function(response){
+            $('.cart-sum').load('/local/include/ajax/ajax.php?MODE=loadFullTotalCart');
         }
     });
 }

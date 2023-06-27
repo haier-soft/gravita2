@@ -1,20 +1,23 @@
 function formOnSuccess(form) {
+    console.log($(form))
     let thisForm = $(form)
     thisForm.find("input[type='text'],input[type='tel']").each(function () {
-        $(this)
-            .val("")
-            .siblings(".form-group__placeholder").css("display", "flex")
-    })
-    thisForm.find('textarea').val("")
-    thisForm.find('.form-group').each(function () {
-        $(this).removeClass("error")
-    })
-    thisForm.find('.file-form').removeClass("error")
-    thisForm.find('.file-form__item').each(function () {
-        $(this).remove()
-    })
-    $("#js-modal-thanks").fadeIn(500);
-    $("body").addClass("noscroll");
+          $(this)
+              .val("")
+              .siblings(".form-group__placeholder").css("display", "flex")
+      })
+      thisForm.find('textarea').val("")
+      thisForm.find("input[type='file']").val("")
+      thisForm.find('.form-group').each(function () {
+          $(this).removeClass("error")
+      })
+      thisForm.find('.file-form').removeClass("error")
+      thisForm.find('.file-form__item').each(function () {
+          $(this).remove()
+      })
+      
+      $("#js-modal-thanks").fadeIn(500);
+      $("body").addClass("noscroll");
 }
 function formReviewSuccess(form) {
     let thisForm = $(form)
@@ -24,6 +27,7 @@ function formReviewSuccess(form) {
             .siblings(".form-group__placeholder").css("display", "flex")
     })
     thisForm.find('textarea').val("")
+    thisForm.find("input[type='file']").val("")
     thisForm.find('.form-group').each(function () {
         $(this).removeClass("error")
     })
@@ -96,7 +100,8 @@ $(function () {
     }
     // add file
     document.querySelectorAll(".file-form").forEach(item => {
-        item.querySelector("input").addEventListener("change", e => {
+        item.querySelector("input").addEventListener("change", e => {   
+            item.querySelectorAll('.file-form__item').forEach(el => el.remove()) 
             let files = e.target.files;
             for (let i = 0; i < files.length; i++) {
                 let f = files[i];
@@ -108,11 +113,21 @@ $(function () {
             }
         })
         item.addEventListener("click", e => {
-            item.querySelectorAll(".file-form__del").forEach(del => {
+            item.querySelectorAll(".file-form__del").forEach((del, idx) => {
                 if (del.contains(e.target)) {
+                    const dt = new DataTransfer()
+                    const input = item.querySelector("input")
+                    const { files } = input
+                    for (let i = 0; i < files.length; i++) {
+                        let file = files[i]
+                        if (i !== idx)
+                            dt.items.add(file)
+                    }
+                    input.files = dt.files
                     del.parentNode.remove()
                 }
             })
+
         })
     })
     // show/unshow custom input placeholder
@@ -165,7 +180,7 @@ $(function () {
             slidesToShow: 3,
             slidesToScroll: 1,
             swipeToSlide: true,
-            infinite: true, 
+            infinite: true,
             dots: false,
             autoplay: true,
             autoplaySpeed: 5000,
@@ -209,7 +224,7 @@ $(function () {
                     init = true
                     const slickProject = $(".js-project .carousel").slick({
                         slidesToShow: 1,
-                        slidesToScroll: 1, 
+                        slidesToScroll: 1,
                         swipeToSlide: true,
                         centerMode: true,
                         centerPadding: '20px',
@@ -320,11 +335,11 @@ $(function () {
                     init = true
                     const slickCert = $(".js-certificates .carousel").slick({
                         slidesToShow: 1,
-                        swipeToSlide: true, 
+                        swipeToSlide: true,
                         slidesToScroll: 1,
                         autoplay: true,
                         autoplaySpeed: 5000,
-                        speed: 800, 
+                        speed: 800,
                         infinite: true,
                         dots: false,
                         prevArrow:
@@ -553,10 +568,10 @@ $(function () {
                     },
                 ],
             });
-    
+
             let currentSlideNews = slickNews.slick("slickCurrentSlide") + 1;
             let totalSlidesNews = slickNews.slick("getSlick").slideCount;
-    
+
             thisNews.find(".counter__current").text(currentSlideNews);
             thisNews.find(".counter__total").text(totalSlidesNews);
             if (!this.classList.contains("active")) {
@@ -577,8 +592,8 @@ $(function () {
             .addClass("active")
             .siblings("[data-block]")
             .removeClass("active");
-            $(".js-news.active .carousel").slick('setPosition');
-            $(".js-news.active .carousel").slick('slickPlay');
+        $(".js-news.active .carousel").slick('setPosition');
+        $(".js-news.active .carousel").slick('slickPlay');
     })
     //designers-slider
     if ($('.js-designers').length > 0) {
@@ -686,33 +701,33 @@ $(function () {
         const url = encodeURIComponent(window.location.href)
         const title = encodeURIComponent(document.title)
         let linkMass = [
-          {
-            title: 'Телеграм',
-            href: "https://t.me/share/url?url=" + url + '&text=' + title,
-            img: "img/icons/baseline-telegram.svg"
-          },
-          {
-            title: 'VK',
-            href: "https://vk.com/share.php?url=" + url + "&title=" + title,
-            img: "img/icons/simple-icons_vk.svg"
-          },
-          {
-            title: 'WhatsApp',
-            href: "https://api.whatsapp.com/send?text=" + encodeURIComponent(document.title + " " + window.location.href),
-            img: "img/icons/baseline-whatsapp.svg"
-          },
-          {
-            title: 'Viber',
-            href: "viber://forward?text=" + url,
-            img: "img/icons/viber-outline.svg"
-          },
-          {
-            title: 'Одноклассники',
-            href: "https://connect.ok.ru/offer?url=" + url + "&title=" + title,
-            img: "img/icons/ok-ru.svg"
-          },
+            {
+                title: 'Телеграм',
+                href: "https://t.me/share/url?url=" + url + '&text=' + title,
+                img: "img/icons/baseline-telegram.svg"
+            },
+            {
+                title: 'VK',
+                href: "https://vk.com/share.php?url=" + url + "&title=" + title,
+                img: "img/icons/simple-icons_vk.svg"
+            },
+            {
+                title: 'WhatsApp',
+                href: "https://api.whatsapp.com/send?text=" + encodeURIComponent(document.title + " " + window.location.href),
+                img: "img/icons/baseline-whatsapp.svg"
+            },
+            {
+                title: 'Viber',
+                href: "viber://forward?text=" + url,
+                img: "img/icons/viber-outline.svg"
+            },
+            {
+                title: 'Одноклассники',
+                href: "https://connect.ok.ru/offer?url=" + url + "&title=" + title,
+                img: "img/icons/ok-ru.svg"
+            },
         ]
-        
+
         document.querySelector(".share-list").insertAdjacentHTML('beforeend', `
           ${linkMass.map(item => `<a class="share-list__item" href="${item.href}" target="_blank" rel="noopener">
              <img src="${item.img}" alt="">
@@ -720,6 +735,6 @@ $(function () {
           </a>`
         ).join("")}
       `);
-      }
+    }
     $('.s-result .js-anchor')
 })

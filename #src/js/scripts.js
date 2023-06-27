@@ -470,15 +470,15 @@ $(function () {
   /*
    * Catalog collections
    */
-
-  const collections = $(".colls-item");
+  const collections = $(".collections")
 
 
   function fixedCollTitle() {
     $(window).on("scroll", function () {
+      const collItem = collections.find(".colls-item");
       if (window.innerWidth <= 991) {
         let offsetTop = $(window).scrollTop();
-        collections.each(function () {
+        collItem.each(function () {
           let item = $(this);
           let itemOffsetTop = item.offset().top;
           let itemOffsetBottom = item.offset().top + item.height() - 40;
@@ -502,7 +502,7 @@ $(function () {
           }
         });
       } else {
-        collections.each(function () {
+        collItem.each(function () {
           $(this).find(".colls-item__title").removeClass("absolute").removeClass("fixed");
         })
       }
@@ -742,26 +742,31 @@ $(function () {
       gutterMasonryColl = 10;
       colMasonryWidth = ".catalog-grid__item";
     }
-
-    $cataloGrid = $(".catalog-grid").masonry({
-      horizontalOrder: true,
-      gutter: gutterMasonry,
-      itemSelector: ".catalog-grid__item",
-      columnWidth: '.catalog-grid__item',
-      fitWidth: true,
-      lazyLoad: true,
-    });
-  
-    $coolGoods = $(".coll-goods").masonry({
-      horizontalOrder: true,
-      gutter: gutterMasonryColl,
-      itemSelector: ".coll-goods__item",
-      columnWidth: '.coll-goods__item',
-      fitWidth: true,
-      lazyLoad: true,
-    });
-    $(".card-items").each(function () {
-      $cardItems = $(this).masonry({
+    $cataloGrid = $(".catalog-grid")
+    $cataloGrid.imagesLoaded(function () {
+      $cataloGrid.masonry({
+        horizontalOrder: true,
+        gutter: gutterMasonry,
+        itemSelector: ".catalog-grid__item",
+        columnWidth: '.catalog-grid__item',
+        fitWidth: true,
+        lazyLoad: true,
+      });
+    })
+    $coolGoods = $(".coll-goods")
+    $coolGoods.imagesLoaded(function () {
+      $coolGoods.masonry({
+        horizontalOrder: true,
+        gutter: gutterMasonryColl,
+        itemSelector: ".coll-goods__item",
+        columnWidth: '.coll-goods__item',
+        fitWidth: true,
+        lazyLoad: true,
+      });
+    })
+    $cardItems = $(".card-items")
+    $cardItems.imagesLoaded(function () {
+      $cardItems.masonry({
         horizontalOrder: true,
         gutter: carditemGutter,
         itemSelector: ".card-item",
@@ -772,8 +777,40 @@ $(function () {
     })
 
   });
-
-  $cataloGrid = $(".catalog-grid").masonry({
+  $cataloGrid = $(".catalog-grid")
+  $cataloGrid.imagesLoaded(function () {
+    $cataloGrid.masonry({
+      horizontalOrder: true,
+      gutter: gutterMasonry,
+      itemSelector: ".catalog-grid__item",
+      columnWidth: '.catalog-grid__item',
+      fitWidth: true,
+      lazyLoad: true,
+    });
+  })
+  $coolGoods = $(".coll-goods")
+  $coolGoods.imagesLoaded(function () {
+    $coolGoods.masonry({
+      horizontalOrder: true,
+      gutter: gutterMasonryColl,
+      itemSelector: ".coll-goods__item",
+      columnWidth: '.coll-goods__item',
+      fitWidth: true,
+      lazyLoad: true,
+    });
+  })
+  $cardItems = $(".card-items")
+  $cardItems.imagesLoaded(function () {
+    $cardItems.masonry({
+      horizontalOrder: true,
+      gutter: carditemGutter,
+      itemSelector: ".card-item",
+      columnWidth: '.card-item',
+      fitWidth: true,
+      lazyLoad: true,
+    });
+  })
+  /* $cataloGrid = $(".catalog-grid").masonry({
     horizontalOrder: true,
     gutter: gutterMasonry,
     itemSelector: ".catalog-grid__item",
@@ -799,7 +836,7 @@ $(function () {
       fitWidth: true,
       lazyLoad: true,
     });
-  })
+  }) */
 
   /*
    * Range slider price
