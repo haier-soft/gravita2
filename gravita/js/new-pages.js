@@ -2,22 +2,22 @@ function formOnSuccess(form) {
     console.log($(form))
     let thisForm = $(form)
     thisForm.find("input[type='text'],input[type='tel']").each(function () {
-          $(this)
-              .val("")
-              .siblings(".form-group__placeholder").css("display", "flex")
-      })
-      thisForm.find('textarea').val("")
-      thisForm.find("input[type='file']").val("")
-      thisForm.find('.form-group').each(function () {
-          $(this).removeClass("error")
-      })
-      thisForm.find('.file-form').removeClass("error")
-      thisForm.find('.file-form__item').each(function () {
-          $(this).remove()
-      })
-      
-      $("#js-modal-thanks").fadeIn(500);
-      $("body").addClass("noscroll");
+        $(this)
+            .val("")
+            .siblings(".form-group__placeholder").css("display", "flex")
+    })
+    thisForm.find('textarea').val("")
+    thisForm.find("input[type='file']").val("")
+    thisForm.find('.form-group').each(function () {
+        $(this).removeClass("error")
+    })
+    thisForm.find('.file-form').removeClass("error")
+    thisForm.find('.file-form__item').each(function () {
+        $(this).remove()
+    })
+
+    $("#js-modal-thanks").fadeIn(500);
+    $("body").addClass("noscroll");
 }
 function formReviewSuccess(form) {
     let thisForm = $(form)
@@ -100,8 +100,8 @@ $(function () {
     }
     // add file
     document.querySelectorAll(".file-form").forEach(item => {
-        item.querySelector("input").addEventListener("change", e => {   
-            item.querySelectorAll('.file-form__item').forEach(el => el.remove()) 
+        item.querySelector("input").addEventListener("change", e => {
+            item.querySelectorAll('.file-form__item').forEach(el => el.remove())
             let files = e.target.files;
             for (let i = 0; i < files.length; i++) {
                 let f = files[i];
@@ -736,5 +736,23 @@ $(function () {
         ).join("")}
       `);
     }
-    $('.s-result .js-anchor')
+    $(".menu__link").on("click", function () {
+        $(".search").slideUp();
+        $(".dropdown").slideUp();
+        $("body").removeClass("noscroll");
+        $(".menu-toggle").removeClass("open");
+    });
+    $(".item-promo__code span").on("click", function (e) {
+        e.preventDefault();
+        let $tmp = $("<input>");
+        $("body").append($tmp);
+        $tmp.val($(this).text()).select();
+        document.execCommand("copy");
+        $tmp.remove();
+        $(".js-copy-promocode").addClass("open");
+
+        setTimeout(function () {
+            $(".js-copy-promocode").removeClass("open");
+        }, 3500);
+    });
 })

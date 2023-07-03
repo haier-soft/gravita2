@@ -382,8 +382,8 @@
 .item-shop {
     padding: 19px 30px;
     display: grid;
-    grid-template-columns: auto 500px 232px 187px;
-    gap:160px;
+    grid-template-columns: auto 500px 260px 187px;
+    gap:140px;
     align-items: center;
     background: #FFFFFF;
     border: 1px solid rgba(45, 42, 38, 0.2);
@@ -450,8 +450,8 @@
         }
     }
     @media screen and (max-width: 1859px) {
-        grid-template-columns: auto 422px 207px 165px;
-        gap: 110px;
+        grid-template-columns: auto 422px 235px 165px;
+        gap: 90px;
         &__name {
             font-size: 20px;
             span {
@@ -475,8 +475,8 @@
     }
     @media screen and (max-width: 1599px) {
         padding: 19px;
-        grid-template-columns: auto 365px 207px 145px;
-        gap: 57px;
+        grid-template-columns: auto 365px 225px 145px;
+        gap: 47px;
         &__name {
             font-size: 16px;
             span {

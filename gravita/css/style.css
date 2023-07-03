@@ -613,6 +613,7 @@ h6,
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
   word-break: break-word;
+  cursor: pointer;
 }
 
 .item-promo__btn {
@@ -3870,8 +3871,8 @@ h6,
 .item-shop {
   padding: 19px 30px;
   display: grid;
-  grid-template-columns: auto 500px 232px 187px;
-  gap: 160px;
+  grid-template-columns: auto 500px 260px 187px;
+  gap: 140px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -4263,8 +4264,8 @@ h6,
   }
 
   .item-shop {
-    grid-template-columns: auto 422px 207px 165px;
-    gap: 110px;
+    grid-template-columns: auto 422px 235px 165px;
+    gap: 90px;
   }
 
   .item-shop__name {
@@ -4835,8 +4836,8 @@ h6,
 
   .item-shop {
     padding: 19px;
-    grid-template-columns: auto 365px 207px 145px;
-    gap: 57px;
+    grid-template-columns: auto 365px 225px 145px;
+    gap: 47px;
   }
 
   .item-shop__name {
