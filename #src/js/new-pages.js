@@ -755,4 +755,11 @@ $(function () {
             $(".js-copy-promocode").removeClass("open");
         }, 3500);
     });
+    $().fancybox({
+        selector : '.store-gallery__carousel .slick-slide:not(.slick-cloned) .gallery__item',
+    });
+    $().fancybox({
+        selector : '.product-carousel .slick-slide:not(.slick-cloned) .item, .product__video, .product__3d'
+      });
+
 })

@@ -4019,6 +4019,45 @@ h6,
   margin-left: 10px;
 }
 
+/* .js-project-products .card__top, .js-similar-size .card__top, .js-similar-style .card__top, .js-viewed-products .card__top {
+    padding-top: 0;
+    position: static;
+}
+.js-project-products .card__img, .js-similar-size .card__img, .js-similar-style .card__img, .js-viewed-products .card__img {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+}
+.js-project-products .carousel .slick-track, .js-similar-size .carousel .slick-track, .js-similar-style .carousel .slick-track, .js-viewed-products .carousel .slick-track {
+    align-items: stretch
+}
+.slick-list {
+    display: flex;
+}
+.slick-slide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+     > div {
+        height: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .card__top {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+ */
+
 @media (min-width: 1599px) {
   .cart-empty .title {
     margin-bottom: 60px;
